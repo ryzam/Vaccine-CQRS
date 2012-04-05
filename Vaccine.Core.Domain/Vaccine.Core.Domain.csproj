@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F20DD284-C763-498B-B3E9-65E94F63CB38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vaccine.Core.Domain</RootNamespace>
+    <AssemblyName>Vaccine.Core.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\Vaccine.Office.Web\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamic.Role">
+      <HintPath>..\Vaccine.Office.Web\packages\DynamicRole\Dynamic.Role.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.Common">
+      <HintPath>..\Vaccine.Office.Web\packages\DynamicRole\LinFu.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.Delegates">
+      <HintPath>..\Vaccine.Office.Web\packages\DynamicRole\LinFu.Delegates.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\Vaccine.Office.Web\packages\DynamicRole\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.Reflection">
+      <HintPath>..\Vaccine.Office.Web\packages\DynamicRole\LinFu.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\Vaccine.Office.Web\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Context\ChangeAccountNameAndBalanceContext.cs" />
+    <Compile Include="Context\CreateBankAccountContext.cs" />
+    <Compile Include="Context\TransferMoneyContext.cs" />
+    <Compile Include="BoundedContext\Account.cs" />
+    <Compile Include="Infrastructure\IReportingSessionFactory.cs" />
+    <Compile Include="Infrastructure\QueryModule.cs" />
+    <Compile Include="Queries\IQuery.cs" />
+    <Compile Include="Reporting\BankAccountReport.cs" />
+    <Compile Include="ValueObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Vaccine\Vaccine.Core.Cqrs\Vaccine.Core.Cqrs.csproj">
+      <Project>{55FB4922-245D-41E1-BE22-A967A9F18B9F}</Project>
+      <Name>Vaccine.Core.Cqrs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
