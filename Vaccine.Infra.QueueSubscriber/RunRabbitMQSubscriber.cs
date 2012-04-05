@@ -14,12 +14,12 @@ using NHibernate.Cfg;
 using NHibernate;
 using NHibernate.Dialect;
 using Vaccine.Core.Domain.Context;
-using Vaccine.Core.Domain.Model;
 using NHibernate.Type;
 using Vaccine.Core.Cqrs.Aggregate;
 using System.Threading;
 using System.Reflection;
 using Vaccine.Office.Reporting;
+using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Infra.QueueSubsriber
 {

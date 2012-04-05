@@ -13,7 +13,6 @@ using Vaccine.Core.Cqrs.Commands;
 using Vaccine.Core.Cqrs.Events;
 using Vaccine.Core.Domain.Context;
 using NHibernate;
-using Vaccine.Core.Domain.Model;
 using Vaccine.Core.Cqrs.Queue;
 
 namespace Vaccine.Office.Web

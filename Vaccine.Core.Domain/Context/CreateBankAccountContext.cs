@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.Model;
 using NHibernate.Context;
 using NHibernate.Linq;
 using Vaccine.Core.Cqrs.Commands;
 using Vaccine.Core.Cqrs.Events;
 using MediuCms.Core.Cqrs.Commands;
+using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Core.Domain.Context
 {
@@ -51,10 +51,10 @@ namespace Vaccine.Core.Domain.Context
             }
         }
 
-        public Account GetAggregate()
-        {
-            return _account;
-        }
+        //public Account GetAggregate()
+        //{
+        //    return _account;
+        //}
 
 
     }

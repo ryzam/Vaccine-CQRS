@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.Model;
 using NHibernate.Context;
 using Vaccine.Core.Cqrs.Commands;
 using Vaccine.Core.Cqrs.Events;
 using MediuCms.Core.Cqrs.Commands;
+using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Core.Domain.Context
 {

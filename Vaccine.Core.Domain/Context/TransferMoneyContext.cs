@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.Model;
 using NHibernate;
 using Dynamic.Role;
 using NHibernate.Context;
@@ -12,6 +11,7 @@ using Vaccine.Core.Domain.Infrastructure;
 using NHibernate.Linq;
 using Vaccine.Core.Domain.Reporting;
 using MediuCms.Core.Cqrs.Commands;
+using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Core.Domain.Context
 {
