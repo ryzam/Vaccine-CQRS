@@ -20,12 +20,18 @@ namespace Vaccine.Core.Cqrs.Queue
         {
             factory = new ConnectionFactory();
 
-            if (connection != null)
+            if (connection != null && connection != string.Empty)
+            {
                 factory.Uri = connection;
+            }
+            else
+            {
+                factory.HostName = "localhost";
+            }
 
             Console.WriteLine("Creating connection...");
             factory.Protocol = Protocols.FromEnvironment();
-            factory.HostName = "localhost";
+           
             conn = factory.CreateConnection();
 
             Console.WriteLine("Creating channel...");
