@@ -22,6 +22,7 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Infra.QueueS
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Infra.QueueSubscriber\bin\Debug\NHibernate.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Infra.QueueSubscriber\bin\Debug\RabbitMQ.Client.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Infra.QueueSubscriber\bin\Debug\Autofac.xml
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\bin\Debug\Vaccine.Infra.QueueSubscriber.exe
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\bin\Debug\Vaccine.Infra.QueueSubscriber.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\bin\Debug\Dynamic.Role.dll
@@ -43,6 +44,5 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.Qu
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\bin\Debug\NHibernate.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\bin\Debug\RabbitMQ.Client.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\bin\Debug\Autofac.xml
-C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\obj\Debug\Vaccine.Infra.QueueSubscriber.exe
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Infra.QueueSubscriber\obj\Debug\Vaccine.Infra.QueueSubscriber.pdb

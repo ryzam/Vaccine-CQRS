@@ -50,7 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Vaccine\Vaccine.Core.Cqrs\Vaccine.Core.Cqrs.csproj">
+    <ProjectReference Include="..\Vaccine.Core.Cqrs\Vaccine.Core.Cqrs.csproj">
       <Project>{55FB4922-245D-41E1-BE22-A967A9F18B9F}</Project>
       <Name>Vaccine.Core.Cqrs</Name>
     </ProjectReference>

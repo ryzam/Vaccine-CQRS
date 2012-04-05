@@ -6,7 +6,7 @@ using Dynamic.Role;
 using Vaccine.Core.Cqrs.Events;
 using System.Reflection;
 using Vaccine.Core.Cqrs.Infrastructure;
-using MediuCms.Core.Cqrs.Infrastructure;
+
 
 namespace Vaccine.Core.Cqrs.Aggregate
 {

@@ -15,9 +15,6 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Core.Cqrs\bi
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Core.Cqrs\bin\Debug\NHibernate.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Core.Cqrs\obj\Debug\Vaccine.Core.Cqrs.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Core.Cqrs\obj\Debug\Vaccine.Core.Cqrs.pdb
-C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\obj\Debug\Vaccine.Core.Cqrs.dll
-C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\obj\Debug\Vaccine.Core.Cqrs.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\bin\Debug\Vaccine.Core.Cqrs.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\bin\Debug\Vaccine.Core.Cqrs.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\bin\Debug\Autofac.dll
@@ -32,3 +29,6 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqr
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\bin\Debug\Autofac.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\bin\Debug\Iesi.Collections.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\bin\Debug\NHibernate.xml
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\obj\Debug\Vaccine.Core.Cqrs.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Cqrs\obj\Debug\Vaccine.Core.Cqrs.pdb

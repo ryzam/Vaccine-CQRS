@@ -8,7 +8,6 @@ using Vaccine.Core.Cqrs.Aggregate;
 using Vaccine.Core.Cqrs.Commands;
 using NHibernate;
 using NHibernate.Linq;
-using MediuCms.Core.Cqrs.Infrastructure;
 using Vaccine.Core.Cqrs.Infrastructure;
 
 namespace Vaccine.Core.Cqrs.Events

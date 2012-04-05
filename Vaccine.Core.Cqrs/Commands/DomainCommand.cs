@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MediuCms.Core.Cqrs.Commands
+namespace Vaccine.Core.Cqrs.Commands
 {
     [Serializable]
     public class DomainCommand : ICommand

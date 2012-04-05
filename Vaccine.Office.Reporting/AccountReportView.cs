@@ -6,7 +6,6 @@ using NHibernate.Linq;
 using NHibernate;
 using Vaccine.Core.Cqrs.Commands;
 using Vaccine.Core.Domain.Reporting;
-using MediuCms.Core.Cqrs.Commands;
 using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Office.Reporting

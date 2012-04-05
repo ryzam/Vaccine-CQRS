@@ -10,7 +10,6 @@ using Vaccine.Core.Cqrs.Events;
 using Vaccine.Core.Domain.Infrastructure;
 using NHibernate.Linq;
 using Vaccine.Core.Domain.Reporting;
-using MediuCms.Core.Cqrs.Commands;
 using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Core.Domain.Context

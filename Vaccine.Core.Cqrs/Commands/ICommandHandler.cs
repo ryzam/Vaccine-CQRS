@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Vaccine.Core.Cqrs.Events;
 
-namespace MediuCms.Core.Cqrs.Commands
+namespace Vaccine.Core.Cqrs.Commands
 {
     public interface ICommandHandler<T> where T : ICommand
     {

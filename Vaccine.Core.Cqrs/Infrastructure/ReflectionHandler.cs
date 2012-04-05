@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 
-namespace MediuCms.Core.Cqrs.Infrastructure
+namespace Vaccine.Core.Cqrs.Infrastructure
 {
     public class ReflectionHandler
     {

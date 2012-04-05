@@ -6,7 +6,6 @@ using NHibernate.Context;
 using NHibernate.Linq;
 using Vaccine.Core.Cqrs.Commands;
 using Vaccine.Core.Cqrs.Events;
-using MediuCms.Core.Cqrs.Commands;
 using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Core.Domain.Context

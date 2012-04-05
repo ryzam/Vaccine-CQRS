@@ -7,7 +7,6 @@ using Vaccine.Core.Cqrs.Commands;
 using Vaccine.Core.Cqrs.Infrastructure;
 using RabbitMQ.Client.Framing.v0_8;
 using Vaccine.Core.Cqrs.Events;
-using MediuCms.Core.Cqrs.Commands;
 
 namespace Vaccine.Core.Cqrs.Queue
 {

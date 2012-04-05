@@ -19,6 +19,7 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Office.Repor
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Office.Reporting\bin\Debug\Autofac.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Office.Reporting\obj\Debug\Vaccine.Office.Reporting.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Office.Reporting\obj\Debug\Vaccine.Office.Reporting.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\bin\Debug\Vaccine.Office.Reporting.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\bin\Debug\Vaccine.Office.Reporting.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\bin\Debug\Iesi.Collections.dll
@@ -37,6 +38,5 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.R
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\bin\Debug\Iesi.Collections.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\bin\Debug\NHibernate.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\bin\Debug\Autofac.xml
-C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\obj\Debug\Vaccine.Office.Reporting.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Reporting\obj\Debug\Vaccine.Office.Reporting.pdb

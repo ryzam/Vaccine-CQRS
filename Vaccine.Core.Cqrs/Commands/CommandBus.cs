@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Vaccine.Core.Cqrs.Events;
 using Vaccine.Core.Cqrs.Queue;
-using MediuCms.Core.Cqrs.Commands;
 
 namespace Vaccine.Core.Cqrs.Commands
 {

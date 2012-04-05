@@ -16,8 +16,6 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Core.Domain\
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Core.Domain\obj\Debug\Vaccine.Core.Domain.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\Vaccine\Vaccine.Core.Domain\obj\Debug\Vaccine.Core.Domain.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\obj\Debug\Vaccine.Core.Domain.dll
-C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\obj\Debug\Vaccine.Core.Domain.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\bin\Debug\Vaccine.Core.Domain.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\bin\Debug\Vaccine.Core.Domain.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\bin\Debug\Autofac.dll
@@ -32,3 +30,5 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Dom
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\bin\Debug\Vaccine.Core.Cqrs.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\bin\Debug\Autofac.xml
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\bin\Debug\NHibernate.xml
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\obj\Debug\Vaccine.Core.Domain.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Core.Domain\obj\Debug\Vaccine.Core.Domain.pdb
