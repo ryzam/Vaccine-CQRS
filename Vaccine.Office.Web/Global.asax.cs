@@ -14,6 +14,8 @@ using Vaccine.Core.Cqrs.Events;
 using Vaccine.Core.Domain.Context;
 using NHibernate;
 using Vaccine.Core.Cqrs.Queue;
+using Vaccine.Office.Reporting;
+using Vaccine.Core.Domain.BoundedContext;
 
 namespace Vaccine.Office.Web
 {
@@ -81,7 +83,10 @@ namespace Vaccine.Office.Web
 
             var rabbitMQPublisher = new RabbitMQPublisher(System.Configuration.ConfigurationManager.AppSettings["CLOUDAMQP_URL"]);
 
-            var commandBus = new CommandBus(rabbitMQPublisher);
+            //Use RabbitMQ
+            //var commandBus = new CommandBus(rabbitMQPublisher);
+
+            var commandBus = new CommandBus();
 
             var eventStore = new EventStore(commandBus, container.Resolve<ISessionFactory>());
 
@@ -96,14 +101,19 @@ namespace Vaccine.Office.Web
             commandBus.RegisterHandlerCommand<ChangeAccountNameAndBalanceCommand>(changeAccountAndBalanceContext.Handle);
 
             //Report View
-            //var accountReportView = new AccountReportView(eventStore);
+            var accountReportView = new AccountReportView(eventStore._sf);
 
-            ////Register Event
-            //commandBus.RegisterHandlerEvent<AccountCreatedEvent>(accountReportView.Handle);
-            //commandBus.RegisterHandlerEvent<AccountNameAndBalanceChangedEvent>(accountReportView.Handle);
+            //Register Event
+            commandBus.RegisterHandlerEvent<AccountCreatedEvent>(accountReportView.Handle);
+
+            commandBus.RegisterHandlerEvent<AccountNameAndBalanceChangedEvent>(accountReportView.Handle);
+
+            commandBus.RegisterHandlerEvent<BalanceDecreasedEvent>(accountReportView.Handle);
+
+            commandBus.RegisterHandlerEvent<BalanceIncreasedEvent>(accountReportView.Handle);
 
 
-            ServiceLocator.Pub = rabbitMQPublisher;
+            //ServiceLocator.Pub = rabbitMQPublisher;
             ServiceLocator.Bus = commandBus;
             //ServiceLocator.Sub = rabbitMQSubsriber;
         }

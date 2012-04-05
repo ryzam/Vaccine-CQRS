@@ -68,8 +68,11 @@ namespace Vaccine.Core.Cqrs.Events
 
                 }
 
-                //aggregateVersion.LastestEventVersion = latestEventVersion;
-                aggregateVersion.Version++;
+                aggregateVersion.LastestEventVersion++;
+
+                _s.Flush();
+
+                //aggregateVersion.Version++;
             }
             
             foreach (var e in events)
@@ -90,6 +93,7 @@ namespace Vaccine.Core.Cqrs.Events
                 else if (e.EventState == EventState.Snapshot)
                 {
                     aggregateVersion.Version++;
+                    root.Version = aggregateVersion.Version;
                 }
 
                
