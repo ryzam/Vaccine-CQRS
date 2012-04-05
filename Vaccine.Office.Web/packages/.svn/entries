@@ -1,0 +1,176 @@
+10
+
+dir
+4
+svn://172.16.100.16/cms2/MediuCms.Office.Web/packages
+svn://172.16.100.16/cms2
+
+
+
+2012-03-02T01:11:07.582625Z
+1
+irwan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5b279472-24f9-2241-9aa0-12ff52dd7016
+
+netfx-Patterns.EventSourcing.Queryable.1.0.0.11
+dir
+
+netfx-Patterns.EventSourcing.EF.1.0.0.10
+dir
+
+jQuery.1.5.1
+dir
+
+netfx-System.ISerializer.1.0.0.1
+dir
+
+netfx-Patterns.EventSourcing.Queryable.Tests.xUnit.1.0.0.11
+dir
+
+netfx-Patterns.EventSourcing.EF.Tests.xUnit.1.0.0.10
+dir
+
+netfx-Guard.Tests.xUnit.1.3.1.2
+dir
+
+EntityFramework.4.3.0
+dir
+
+repositories.config
+file
+
+
+
+
+2012-03-02T01:11:07.582625Z
+dba4d05fab6082a897b23bb118c567c5
+2012-03-02T01:11:07.582625Z
+1
+irwan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+206
+
+jQuery.vsdoc.1.5.1
+dir
+
+jQuery.UI.Combined.1.8.11
+dir
+
+EntityFramework.4.1.10331.0
+dir
+
+NHibernate.3.2.0.4000
+dir
+
+Autofac.Mvc3.2.5.2.830
+dir
+
+netfx-System.Linq.Expressions.ExpressionCombiner.Tests.xUnit.1.0.0.0
+dir
+
+jQuery.Validation.1.8.0
+dir
+
+xunit.1.8.0.1549
+dir
+
+ServiceStack.Text.3.5.2
+dir
+
+netfx-Guard.1.3.1.0
+dir
+
+netfx-System.SequentialGuid.1.0.0.0
+dir
+
+ServiceStack.Text.3.5.7
+dir
+
+PineCone.0.64.0
+dir
+
+netfx-System.ITimestamped.1.0.0.1
+dir
+
+Iesi.Collections.3.2.0.4000
+dir
+
+netfx-Patterns.EventSourcing.1.0.0.12
+dir
+
+netfx-System.ISerializer.Tests.xUnit.1.0.0.1
+dir
+
+NCore.0.27.0
+dir
+
+netfx-System.Clock.1.0.0.2
+dir
+
+Autofac.2.5.2.830
+dir
+
+Ensure.That.0.5.0
+dir
+
+SisoDb.10.1.0
+dir
+
+netfx-System.AmbientSingleton.1.0.0.0
+dir
+
+netfx-Patterns.EventSourcing.Tests.xUnit.1.0.0.13
+dir
+
+netfx-System.Linq.Expressions.ExpressionCombiner.1.0.0.1
+dir
+
+DynamicRole
+dir
+
+SisoDb.SQL2008.10.1.0
+dir
+
+Twitter.Bootstrap.2.0.0
+dir
+
+Moq.4.0.10827
+dir
+
+Modernizr.1.7
+dir
+

@@ -1,0 +1,53 @@
+﻿@{
+    if (Request.Headers["X-PJAX"] != null) 
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Auth/_Layout.cshtml";
+    }
+}
+
+@model Vaccine.Core.Domain.Reporting.BankAccountReport
+           
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#BusinessSignUpForm').submit(function () {
+
+            var form = $(this);
+            $.ajax({
+                url: form.attr('action'),
+                type: "POST",
+                data: form.serialize(),
+                success: function (data) {
+                    $('#formworkspace').html(data);
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                },
+                complete: function () {
+
+                }
+
+            });
+            return false;
+        });
+
+    });
+</script>
+
+@{ Html.RenderPartial("TopNavigationMenu"); }
+
+<h3>Edit Account</h3>
+
+<div id="formworkspace">
+    <form id="BusinessSignUpForm" class="well form-inline" method="post" action="/BankAccount/Edit/@ViewBag.ObjectId">
+        <input type="text" name="accountName" class="input-big" value="@Model.AccountName" placeholder="Account Name">
+        <input type="text" name="amount" class="input-big" value="@Model.Balance.ToString("0.00")" placeholder="Opening Amount">
+        <button type="submit" id="accountBtn" class="btn">Edit</button>
+    </form>
+</div>
+
+

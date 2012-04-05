@@ -1,0 +1,31 @@
+﻿@{
+
+        Layout = "~/Views/Shared/Auth/_Layout.cshtml";
+
+}
+
+@model IEnumerable<MediuCms.Office.Web.Models.Reporting.BankAccountReport>
+
+<script type="text/javascript">
+    function LoadDetail(url) {
+        $('#tableworkspace').load(url);
+    }
+</script>
+
+<a href="/BankAccount/Transfer" class="btn btn-primary">Transfer Money</a>  <a href="/BankAccount/BankAccountReport" class="btn btn-primary">BankAccount Report</a>
+
+<h3>Bank Account Report</h3>
+
+<div id="tableworkspace">
+    <div id="tabledata">
+            <table id="tableapp" class="table table-striped">
+                <thead><tr><th>Account Name</th><th>Balance</th></tr></thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr><td><a href="Detail/@item.ObjectId" >@item.AccountName</a></td><td>@item.Balance.ToString("0.00")</td></tr>
+                    }
+                </tbody>
+            </table>
+    </div>
+</div>

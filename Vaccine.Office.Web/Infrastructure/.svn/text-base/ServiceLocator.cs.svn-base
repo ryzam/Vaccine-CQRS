@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MediuCms.Core.Cqrs.Commands;
+
+namespace MediuCms.Office.Web.Infrastructure
+{
+    public class ServiceLocator
+    {
+        public static CommandBus Bus { get; set; }
+    }
+}

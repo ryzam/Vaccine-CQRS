@@ -1,0 +1,21 @@
+﻿@{
+    if (Request.Headers["X-PJAX"] != null) 
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Auth/_Layout.cshtml";
+    }
+}
+
+<div>
+    <div class="row">
+        <div class="span5">
+            <a href="/WorkFlowSetup/DirectSetup" class="btn btn-large btn-primary" >WorkFlow</a>
+        </div>
+        <div class="span5" style="margin-left:10px">
+           
+        </div>
+    </div>
+</div>

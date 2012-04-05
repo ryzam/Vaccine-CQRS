@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using NHibernate;
+using MediuCms.Core.Domain.Model.Admission;
+
+namespace MediuCms.Office.Web.Controllers
+{
+    public class SetupController : AbstractController
+    {
+        //
+        // GET: /Setup/
+        public SetupController(ISessionFactory sf):base(sf)
+        {
+
+        }
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult RunDirect()
+        {
+            using (var s = sf.OpenSession())
+            {
+                var admissionWf = new AdmissionWorkFlow();
+                admissionWf.Code = "AS";
+                admissionWf.CreatedOn = Convert.ToDateTime("21/02/2012");
+                admissionWf.AdmissionWorkFlowStatus = AdmissionWorkFlowStatus.ApplicationSubmitted;
+
+                var childWf1 = new AdmissionWorkFlow();
+                childWf1.Code = "AP";
+                childWf1.CreatedOn = Convert.ToDateTime("21/02/2012");
+                childWf1.AdmissionWorkFlowStatus = AdmissionWorkFlowStatus.ApplicationInProgress;
+
+                admissionWf.AddAdmissionWorkFlowStatus(childWf1);
+
+                s.Save(admissionWf);
+
+                s.Flush();
+
+                return View("Index");
+            }
+        }
+
+    }
+}
