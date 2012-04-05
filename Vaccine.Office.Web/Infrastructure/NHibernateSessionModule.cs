@@ -28,7 +28,8 @@ namespace Vaccine.Office.Web.Infrastructure
             configuration.DataBaseIntegration(c =>
             {
                 c.Dialect<MsSql2008Dialect>();
-                c.ConnectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=MediuCms;Integrated Security=True;Pooling=False";
+                c.ConnectionString = System.Configuration.ConfigurationManager.AppSettings["SQLSERVER_CONNECTION_STRING"];
+
                 c.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
                 c.SchemaAction = SchemaAutoAction.Update;
 

@@ -16,9 +16,12 @@ namespace Vaccine.Core.Cqrs.Queue
         IConnection conn;
         IModel model;
 
-        public RabbitMQPublisher()
+        public RabbitMQPublisher(string connection)
         {
             factory = new ConnectionFactory();
+
+            if (connection != null)
+                factory.Uri = connection;
 
             Console.WriteLine("Creating connection...");
             factory.Protocol = Protocols.FromEnvironment();

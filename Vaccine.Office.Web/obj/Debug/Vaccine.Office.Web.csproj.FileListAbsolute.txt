@@ -31,3 +31,7 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.W
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Web\bin\Vaccine.Office.Reporting.pdb
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Web\obj\Debug\Vaccine.Office.Web.dll
 C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Web\obj\Debug\Vaccine.Office.Web.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Web\bin\Autofac.xml
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Web\bin\Iesi.Collections.xml
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Web\bin\NHibernate.xml
+C:\Users\user\Documents\Visual Studio 2010\Projects\VaccineCQRS\Vaccine.Office.Web\bin\RabbitMQ.Client.xml

@@ -79,7 +79,7 @@ namespace Vaccine.Office.Web
 
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
-            var rabbitMQPublisher = new RabbitMQPublisher();
+            var rabbitMQPublisher = new RabbitMQPublisher(System.Configuration.ConfigurationManager.AppSettings["CLOUDAMQP_URL"]);
 
             var commandBus = new CommandBus(rabbitMQPublisher);
 
