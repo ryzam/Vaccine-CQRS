@@ -79,7 +79,7 @@ namespace Vaccine.Office.Web.Controllers
             
             _cmdBus.Send(changeAccountNameAndBalanceCommand);
             
-            return RedirectToAction("Detail", new { id = id });
+            return RedirectToAction("Success");
         }
 
         public ActionResult Transfer()
@@ -99,7 +99,7 @@ namespace Vaccine.Office.Web.Controllers
 
             _cmdBus.Send(transferMoneyCommand);
 
-            return RedirectToAction("BankAccountReport");
+            return RedirectToAction("Success");
         }
 
         public ActionResult Success()
