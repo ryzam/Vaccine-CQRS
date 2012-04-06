@@ -8,7 +8,7 @@ namespace Vaccine.Core.Cqrs.Events
     public  interface IDomainEvent
     {
         Guid AggregateRootId { get; set; }
-        int EventVersion { get; set; }
+        //int EventVersion { get; set; }
         EventState EventState { get; set; }
     }
 }

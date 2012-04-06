@@ -10,6 +10,11 @@ namespace Vaccine.Core.Domain.BoundedContext
     [Serializable]
     public class BalanceDecreasedEvent : DomainEvent
     {
+        public BalanceDecreasedEvent(Guid aggregateRootId):base(aggregateRootId)
+        {
+
+        }
+
         public decimal Amount { get; set; }
 
         public decimal Balance { get; set; }
@@ -18,6 +23,12 @@ namespace Vaccine.Core.Domain.BoundedContext
     [Serializable]
     public class BalanceIncreasedEvent : DomainEvent
     {
+        public BalanceIncreasedEvent(Guid aggregateRootId)
+            : base(aggregateRootId)
+        {
+
+        }
+
         public decimal Amount { get; set; }
 
         public decimal Balance { get; set; }
@@ -26,6 +37,11 @@ namespace Vaccine.Core.Domain.BoundedContext
     [Serializable]
     public class AccountNameAndBalanceChangedEvent : DomainEvent
     {
+        public AccountNameAndBalanceChangedEvent(Guid aggregateRootId, int version)
+            : base(aggregateRootId)
+        {
+
+        }
         public decimal Balance { get; set; }
         public string AccountName { get; set; }
     }
@@ -34,11 +50,9 @@ namespace Vaccine.Core.Domain.BoundedContext
     [Serializable]
     public class AccountCreatedEvent : DomainEvent
     {
-        public AccountCreatedEvent(Guid aggregateRootId, int version)
+        public AccountCreatedEvent(Guid aggregateRootId):base(aggregateRootId)
         {
-            this.AggregateRootId = aggregateRootId;
-
-            this.EventVersion = version;
+            
         }
         public decimal OpeningBalance { get; set; }
 
@@ -52,21 +66,17 @@ namespace Vaccine.Core.Domain.BoundedContext
     {
         public Account()
         {
-
         }
 
         public Account(IEnumerable<DomainEvent> events)
-            : this()
         {
             this.ReplayEvent(events);
 
         }
 
         public Account(Guid Id, decimal balance, string accountName)
-            : this()
         {
-            var version = Version;
-            this.ApplyEvent<AccountCreatedEvent>(new AccountCreatedEvent(Id, version) { IsActive = IsActive, OpeningBalance = balance, AccountName = accountName, EventState = EventState.New });
+            this.ApplyEvent<AccountCreatedEvent>(new AccountCreatedEvent(Id) { IsActive = IsActive, OpeningBalance = balance, AccountName = accountName, EventState = EventState.New });
         }
 
         public decimal _balance;
@@ -75,15 +85,15 @@ namespace Vaccine.Core.Domain.BoundedContext
 
         public override void CreateSnapshot()
         {
-            var version = this.Version + 1;
-            this.ApplyEvent<SnapshotCreatedEvent>(new SnapshotCreatedEvent { AggregateRootId = AggregateRootId, SnapshotObject = new Account { _balance = _balance, _accountName = _accountName, AggregateRootId = AggregateRootId, Version = version }, EventVersion = version });
+            //var version = this.Version + 1;
+            this.ApplyEvent<SnapshotCreatedEvent>(new SnapshotCreatedEvent(AggregateRootId) {SnapshotObject = new Account() { _balance = _balance, _accountName = _accountName, AggregateRootId = AggregateRootId} });
         }
 
         public override void OnSnapshotCreated(SnapshotCreatedEvent @event)
         {
             var account = (Account)@event.SnapshotObject;
-            this.AggregateRootId = account.AggregateRootId;
-            this.Version = account.Version;
+            //this.AggregateRootId = account.AggregateRootId;
+            //this.Version = account.Version;
             this._balance = account._balance;
             this._accountName = account._accountName;
 
@@ -91,26 +101,24 @@ namespace Vaccine.Core.Domain.BoundedContext
 
         public void ChangeAccountNameAndBalance(string accountName, decimal balance)
         {
-            this.ApplyEvent<AccountNameAndBalanceChangedEvent>(new AccountNameAndBalanceChangedEvent { AggregateRootId = AggregateRootId, AccountName = accountName, Balance = balance });
+            this.ApplyEvent<AccountNameAndBalanceChangedEvent>(new AccountNameAndBalanceChangedEvent(AggregateRootId,this.Version){ AccountName = accountName, Balance = balance });
         }
 
         public void DecreaseBalance(decimal amount)
         {
             var balance = this._balance - amount;
-            this.ApplyEvent<BalanceDecreasedEvent>(new BalanceDecreasedEvent { AggregateRootId = AggregateRootId, Amount = amount, Balance = balance });
+            this.ApplyEvent<BalanceDecreasedEvent>(new BalanceDecreasedEvent(AggregateRootId){ Amount = amount, Balance = balance });
         }
 
         public void IncreaseBalance(decimal amount)
         {
             var balance = this._balance + amount;
-            this.ApplyEvent<BalanceIncreasedEvent>(new BalanceIncreasedEvent { AggregateRootId = AggregateRootId, Amount = amount, Balance = balance });
+            this.ApplyEvent<BalanceIncreasedEvent>(new BalanceIncreasedEvent(AggregateRootId){ Amount = amount, Balance = balance });
         }
 
         private void OnAccountCreated(AccountCreatedEvent @event)
         {
-            //this.CreateAggregate(@event.AggregateRootId);
             this.AggregateRootId = @event.AggregateRootId;
-            this.Version = @event.EventVersion;
             this.IsActive = @event.IsActive;
             this._accountName = @event.AccountName;
             this._balance = @event.OpeningBalance;
@@ -119,7 +127,6 @@ namespace Vaccine.Core.Domain.BoundedContext
 
         private void OnBalanceIncreased(BalanceIncreasedEvent @event)
         {
-
             this._balance = @event.Balance;
         }
 

@@ -66,11 +66,6 @@ namespace Vaccine.Core.Cqrs.Aggregate
             }
         }
 
-        //public void RegisterEvent<TKey,TEvent>(Action<TKey,TEvent> @event) where TEvent : DomainEvent where TKey : Key
-        //{
-        //    this.handlers.Add(typeof(TEvent).Name, (k,e) => @event((TKey)k,(TEvent)e));
-        //}
-
         public void ApplyEvent<TEvent>(TEvent @event) where TEvent : DomainEvent
         {
             ApplyEvent<TEvent>(@event, true);
@@ -78,15 +73,7 @@ namespace Vaccine.Core.Cqrs.Aggregate
 
         public void ApplyEvent<TEvent>(TEvent @event, bool isNew) where TEvent : DomainEvent
         {
-            //if (@event.EventVersion <= Version)
-            //{
-            //    @event.EventVersion = Version;
-
-            //}
-            //else if (@event.EventVersion > Version)
-            //{
-            //    Version = @event.EventVersion;
-            //}
+            
 
             if (@event.GetType() != typeof(SnapshotCreatedEvent) && IsSnapshot == false && isNew)
             {
@@ -116,7 +103,7 @@ namespace Vaccine.Core.Cqrs.Aggregate
 
         private void StartSnapshot(IEnumerable<IDomainEvent> events)
         {
-            if (events.Count() > 1000)
+            if (events.Count() > 3)
             {
                 IsSnapshot = true;
                 CreateSnapshot();
@@ -138,17 +125,6 @@ namespace Vaccine.Core.Cqrs.Aggregate
             return this.GetType().Name;
         }
 
-        //public void CreateAggregate(Guid aggregateRootId)
-        //{
-        //    OnAggregateCreatedEvent(new AggregateCreatedEvent(aggregateRootId));
-        //}
-
-        //public void OnAggregateCreatedEvent(AggregateCreatedEvent e)
-        //{
-        //    this.AggregateRootId = e.AggregateRootId;
-        //    this.Version = e.EventVersion;
-        //    this.IsActive = e.IsActive;
-        //}
 
         public void ClearEvents()
         {

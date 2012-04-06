@@ -28,7 +28,7 @@ namespace Vaccine.Office.Reporting
 
                 var Id = Guid.NewGuid();
 
-                var bankAccountReport = new BankAccountReport { Id = Id, AccountName = report.AccountName, Balance = report.OpeningBalance, AggregateRootId = report.AggregateRootId, Version = report.EventVersion };
+                var bankAccountReport = new BankAccountReport { Id = Id, AccountName = report.AccountName, Balance = report.OpeningBalance, AggregateRootId = report.AggregateRootId };
 
                 s.Save(bankAccountReport);
 

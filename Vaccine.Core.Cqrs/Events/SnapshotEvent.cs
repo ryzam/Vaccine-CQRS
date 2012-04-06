@@ -8,7 +8,7 @@ namespace Vaccine.Core.Cqrs.Events
     [Serializable]
     public class SnapshotCreatedEvent : DomainEvent
     {
-        public SnapshotCreatedEvent()
+        public SnapshotCreatedEvent(Guid aggregateRootId):base(aggregateRootId)
         {
             EventState = EventState.Snapshot;
             

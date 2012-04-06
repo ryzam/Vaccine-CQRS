@@ -12,7 +12,7 @@ namespace Vaccine.Core.Domain.Reporting
 
         }
 
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
 
     }

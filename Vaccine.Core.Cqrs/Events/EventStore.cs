@@ -54,7 +54,7 @@ namespace Vaccine.Core.Cqrs.Events
                 {
                     Console.WriteLine("Concurrency Problem");
 
-                    var latestEvents = GetEventsByAggregateId(root.AggregateRootId).Where(c => c.EventVersion > comittedVersion);
+                    //var latestEvents = GetEventsByAggregateId(root.AggregateRootId).Where(c => c.EventVersion > comittedVersion);
 
                     //Retry Command
                     if (commandId != Guid.Empty)
@@ -79,7 +79,7 @@ namespace Vaccine.Core.Cqrs.Events
             {
                 eventVersion++;
 
-                e.EventVersion = eventVersion;
+                //e.EventVersion = eventVersion;
 
                 if (e.EventState == EventState.New)
                 {
@@ -95,8 +95,7 @@ namespace Vaccine.Core.Cqrs.Events
                     aggregateVersion.Version++;
                     root.Version = aggregateVersion.Version;
                 }
-
-               
+                
                 var storedEvent = new StoredEvent
                     {
                         Id = SequentialGuid.NewGuid(),
@@ -127,18 +126,18 @@ namespace Vaccine.Core.Cqrs.Events
             Save<T>(root, Guid.Empty);
         }
 
-        private static int ReAssignVersion<T>(AggregateRootEs<T> root, DomainEvent e, int version, AggregateVersion aggregate)
-        {
-            version = aggregate.Version;
+        //private static int ReAssignVersion<T>(AggregateRootEs<T> root, DomainEvent e, int version, AggregateVersion aggregate)
+        //{
+        //    version = aggregate.Version;
 
-            e.EventVersion = version;
+        //    e.EventVersion = version;
 
-            root.Version = version;
+        //    root.Version = version;
 
-            e.AggregateRootId = root.AggregateRootId;
+        //    e.AggregateRootId = root.AggregateRootId;
 
-            return version;
-        }
+        //    return version;
+        //}
 
         public T GetById<T>(Guid Id) where T : AggregateRootEs<T>, new()
         {
@@ -153,6 +152,8 @@ namespace Vaccine.Core.Cqrs.Events
                                 
 
                 T t = new T();
+                t.AggregateRootId = aggregate.Id;
+                t.Version = aggregate.Version;
 
                 t.ReplayEvent(@events);
 
