@@ -11,7 +11,7 @@ namespace Vaccine.Core.Domain.Reporting
     {
         public CustomerReport()
         {
-
+            Id = Guid.NewGuid();
         }
 
         public virtual Guid Id { get; set; }

@@ -38,6 +38,7 @@
 
 @model Vaccine.Office.Web.Models.CustomerReports.DetailModel
 
+@{ Html.RenderPartial("../OnlineBookShop/TopNavigationMenu"); }
 
 <form id="BusinessSignUpForm" class="form-horizontal" method="post" action="/CustomerRegistration/RegisterAddress">
         @Html.HiddenFor(x => x.AggregateRootId )

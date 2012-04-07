@@ -68,8 +68,12 @@
     <Compile Include="BoundedContext\CustomerRegistration\CustomerAddressAdded.cs" />
     <Compile Include="BoundedContext\CustomerRegistration\CustomerCreatedEvent.cs" />
     <Compile Include="BoundedContext\CustomerRegistration\CustomerStatus.cs" />
+    <Compile Include="BoundedContext\ProductInventory\CreateProductCommand.cs" />
+    <Compile Include="BoundedContext\ProductInventory\Product.cs" />
+    <Compile Include="BoundedContext\ProductInventory\ProductCreatedEvent.cs" />
     <Compile Include="Context\CustomerRegistration\AddCustomerAddressContext.cs" />
     <Compile Include="Context\CustomerRegistration\CreateCustomerContext.cs" />
+    <Compile Include="Context\ProductInventory\StockNewProductContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Context\AccountTransaction\ChangeAccountNameAndBalanceContext.cs" />
     <Compile Include="Context\AccountTransaction\CreateBankAccountContext.cs" />
@@ -81,6 +85,7 @@
     <Compile Include="Reporting\AccountTransactionReport.cs" />
     <Compile Include="Reporting\BankAccountReport.cs" />
     <Compile Include="Reporting\CustomerReport.cs" />
+    <Compile Include="Reporting\ProductStockReport.cs" />
     <Compile Include="ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>

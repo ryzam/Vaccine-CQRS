@@ -19,36 +19,36 @@ namespace Vaccine.Office.Reporting
             this._sf = sf;
         }
 
-        public void Handle(CustomerCreatedEvent report)
+        public void Handle(CustomerCreatedEvent r)
         {
             using (var s = _sf.OpenSession())
             {
-                var customerReport = new CustomerReport {Id= Guid.NewGuid(), AggregateRootId = report.AggregateRootId, Name = report.name, Email = report.email, CustomerStatus = report.customerStatus };
+                var customerReport = new CustomerReport {AggregateRootId = r.AggregateRootId, Name = r.name, Email = r.email, CustomerStatus = r.customerStatus };
                 s.Save(customerReport);
                 s.Flush();
                 s.Close();
             }
         }
 
-        public void Handle(CustomerAddressAddedEvent report)
+        public void Handle(CustomerAddressAddedEvent r)
         {
             using (var s = _sf.OpenSession())
             {
-                var customerReport = s.Query<CustomerReport>().Where(c => c.AggregateRootId == report.AggregateRootId).FirstOrDefault();
+                var customerReport = s.Query<CustomerReport>().Where(c => c.AggregateRootId == r.AggregateRootId).FirstOrDefault();
 
-                if (report.addressType == Address.AddressType.Home)
+                if (r.addressType == Address.AddressType.Home)
                 {
-                    customerReport.Address1G1 = report.address1;
-                    customerReport.Address2G1 = report.address2;
-                    customerReport.PostCodeG1 = report.postCode;
-                    customerReport.AddressTypeG1 = report.addressType;
+                    customerReport.Address1G1 = r.address1;
+                    customerReport.Address2G1 = r.address2;
+                    customerReport.PostCodeG1 = r.postCode;
+                    customerReport.AddressTypeG1 = r.addressType;
                 }
                 else
                 {
-                    customerReport.Address1G2 = report.address1;
-                    customerReport.Address2G2 = report.address2;
-                    customerReport.PostCodeG2 = report.postCode;
-                    customerReport.AddressTypeG2 = report.addressType;
+                    customerReport.Address1G2 = r.address1;
+                    customerReport.Address2G2 = r.address2;
+                    customerReport.PostCodeG2 = r.postCode;
+                    customerReport.AddressTypeG2 = r.addressType;
                 }
 
                 s.Flush();

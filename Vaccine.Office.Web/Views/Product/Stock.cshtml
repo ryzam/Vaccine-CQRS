@@ -1,0 +1,92 @@
+﻿@{
+    if (Request.Headers["X-PJAX"] != null) 
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Auth/_Layout.cshtml";
+    }
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#BusinessSignUpForm').submit(function () {
+
+            var form = $(this);
+            $.ajax({
+                url: form.attr('action'),
+                type: "POST",
+                data: form.serialize(),
+                success: function (data) {
+                    $('#formworkspace').html(data);
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                },
+                complete: function () {
+
+                }
+
+            });
+            return false;
+        });
+
+    });
+</script>
+
+@{ Html.RenderPartial("../OnlineBookShop/TopNavigationMenu"); }
+
+<form id="BusinessSignUpForm" class="form-horizontal" method="post" action="/Product/Stock">
+        
+        <fieldset>
+          <legend>Add Product</legend>
+             
+               
+                    <div class="control-group">
+                    <label class="control-label" for="input01">Name</label>
+                        <div class="controls">
+
+                          <input type="text" class="input-xlarge"  name="name">
+              
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="input01">Code</label>
+                        <div class="controls">
+
+                          <input type="text" class="input-xlarge"  name="code">
+              
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="input01">Stock</label>
+                        <div class="controls">
+
+                          <input type="text" class="input-xlarge"  name="stock">
+              
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="input01">Price</label>
+                        <div class="controls">
+
+                          <input type="text" class="input-xlarge"  name="price">
+              
+                        </div>
+                    </div>
+
+                    
+                
+            
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button class="btn">Cancel</button>
+
+          </div>
+        </fieldset>
+      </form>

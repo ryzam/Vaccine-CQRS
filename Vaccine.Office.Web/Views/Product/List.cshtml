@@ -4,18 +4,18 @@
 
 }
 
-@model IEnumerable<Vaccine.Core.Domain.Reporting.CustomerReport>
+@model IEnumerable<Vaccine.Core.Domain.Reporting.ProductStockReport>
 
 @{ Html.RenderPartial("../OnlineBookShop/TopNavigationMenu"); }
 
 <div id="tableworkspace">
     <div id="tabledata">
             <table id="tableapp" class="table table-striped">
-                <thead><tr><th>Customer Name</th><th>Email</th><th>Status</th></tr></thead>
+                <thead><tr><th>Product Name</th><th>Code</th><th>Stock</th><th>Price</th></tr></thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr><td><a href="Detail/@item.AggregateRootId" >@item.Name</a></td><td>@item.Email</td><td>@item.CustomerStatus</td></tr>
+                        <tr><td><a href="Detail/@item.AggregateRootId" >@item.Name</a></td><td>@item.Code</td><td>@item.Stock</td><td>@item.Price.ToString("0.00")</td></tr>
                     }
                 </tbody>
             </table>

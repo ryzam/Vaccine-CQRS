@@ -34,6 +34,8 @@ namespace Vaccine.Office.Web.Controllers
             {
                 var customerReports = s.Query<CustomerReport>().ToList<CustomerReport>();
 
+                s.Close();
+
                 return View(customerReports);
             }
         }
@@ -43,6 +45,8 @@ namespace Vaccine.Office.Web.Controllers
             using (var s = sf.OpenSession())
             {
                 var customerReport = s.Query<CustomerReport>().Where(c => c.AggregateRootId == Id).FirstOrDefault();
+
+                s.Close();
 
                 return View(new DetailModel(customerReport));
             }
