@@ -16,6 +16,8 @@ using NHibernate;
 using Vaccine.Core.Cqrs.Queue;
 using Vaccine.Office.Reporting;
 using Vaccine.Core.Domain.BoundedContext;
+using Vaccine.Core.Domain.Context.CustomerRegistration;
+using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
 
 namespace Vaccine.Office.Web
 {
@@ -94,23 +96,29 @@ namespace Vaccine.Office.Web
             var transferMoneyContext = new TransferMoneyContext(eventStore);
             var createBankAccountContext = new CreateBankAccountContext(eventStore);
             var changeAccountAndBalanceContext = new ChangeAccountNameAndBalanceContext(eventStore);
+            var createCustomerContext = new CreateCustomerContext(eventStore);
+            var addCustomerAddressContext = new AddCustomerAddressContext(eventStore);
 
             //Register Command
             commandBus.RegisterHandlerCommand<OpenAccountCommand>(createBankAccountContext.Handle);
             commandBus.RegisterHandlerCommand<TransferMoneyCommand>(transferMoneyContext.Handle);
             commandBus.RegisterHandlerCommand<ChangeAccountNameAndBalanceCommand>(changeAccountAndBalanceContext.Handle);
+            commandBus.RegisterHandlerCommand<CreateCustomerCommand>(createCustomerContext.Handle);
+            commandBus.RegisterHandlerCommand<AddCustomerAddressCommand>(addCustomerAddressContext.Handle);
 
             //Report View
             var accountReportView = new AccountReportView(eventStore._sf);
 
             //Register Event
             commandBus.RegisterHandlerEvent<AccountCreatedEvent>(accountReportView.Handle);
-
             commandBus.RegisterHandlerEvent<AccountNameAndBalanceChangedEvent>(accountReportView.Handle);
-
             commandBus.RegisterHandlerEvent<BalanceDecreasedEvent>(accountReportView.Handle);
-
             commandBus.RegisterHandlerEvent<BalanceIncreasedEvent>(accountReportView.Handle);
+
+            var customerReportView = new CustomerReportView(eventStore._sf);
+            commandBus.RegisterHandlerEvent<CustomerCreatedEvent>(customerReportView.Handle);
+            commandBus.RegisterHandlerEvent<CustomerAddressAddedEvent>(customerReportView.Handle);
+                
 
 
             //ServiceLocator.Pub = rabbitMQPublisher;

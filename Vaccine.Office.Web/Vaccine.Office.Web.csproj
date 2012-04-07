@@ -95,7 +95,10 @@
   <ItemGroup>
     <Compile Include="Controllers\AbstractController.cs" />
     <Compile Include="Controllers\BankAccountController.cs" />
+    <Compile Include="Controllers\CustomerRegistrationController.cs" />
+    <Compile Include="Controllers\CustomerReportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OnlineBookShopController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -106,6 +109,8 @@
     <Compile Include="Models\AcademicApplication\IModel.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BankAccount\TransferModel.cs" />
+    <Compile Include="Models\CustomerReports\DetailModel.cs" />
+    <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\QueryExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -244,6 +249,27 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Course\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OnlineBookShop\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OnlineBookShop\TopNavigationMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CustomerRegistration\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CustomerRegistration\Success.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CustomerReport\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CustomerRegistration\TopNavigationMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CustomerReport\Detail.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
