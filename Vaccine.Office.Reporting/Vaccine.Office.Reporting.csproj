@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AccountReportView.cs" />
     <Compile Include="CustomerReportView.cs" />
+    <Compile Include="PlaceOrderView.cs" />
     <Compile Include="ProductStockReportView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

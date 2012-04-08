@@ -11,11 +11,11 @@
 <div id="tableworkspace">
     <div id="tabledata">
             <table id="tableapp" class="table table-striped">
-                <thead><tr><th>Customer Name</th><th>Email</th><th>Status</th></tr></thead>
+                <thead><tr><th>Customer Name</th><th>Email</th><th>Status</th><th>Order</th></tr></thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr><td><a href="Detail/@item.AggregateRootId" >@item.Name</a></td><td>@item.Email</td><td>@item.CustomerStatus</td></tr>
+                        <tr><td><a href="Detail/@item.AggregateRootId" >@item.Name</a></td><td>@item.Email</td><td>@item.CustomerStatus</td><td><a href="../Order/ViewOrder/@item.AggregateRootId" >View Orders</td></tr>
                     }
                 </tbody>
             </table>

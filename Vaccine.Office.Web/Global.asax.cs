@@ -20,6 +20,8 @@ using Vaccine.Core.Domain.Context.CustomerRegistration;
 using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
 using Vaccine.Core.Domain.BoundedContext.ProductInventory;
 using Vaccine.Core.Domain.Context.ProductInventory;
+using Vaccine.Core.Domain.Context.PlaceOrder;
+using Vaccine.Core.Domain.BoundedContext.Order;
 
 namespace Vaccine.Office.Web
 {
@@ -101,6 +103,7 @@ namespace Vaccine.Office.Web
             var createCustomerContext = new CreateCustomerContext(eventStore);
             var addCustomerAddressContext = new AddCustomerAddressContext(eventStore);
             var stockNewProductContext = new StockNewProductContext(eventStore);
+            var placeOrderContext = new PlaceOrderContext(eventStore);
 
             //Register Command
             commandBus.RegisterHandlerCommand<OpenAccountCommand>(createBankAccountContext.Handle);
@@ -109,6 +112,8 @@ namespace Vaccine.Office.Web
             commandBus.RegisterHandlerCommand<CreateCustomerCommand>(createCustomerContext.Handle);
             commandBus.RegisterHandlerCommand<AddCustomerAddressCommand>(addCustomerAddressContext.Handle);
             commandBus.RegisterHandlerCommand<CreateProductCommand>(stockNewProductContext.Handle);
+            commandBus.RegisterHandlerCommand<PlaceOrderCommand>(placeOrderContext.Handle);
+
 
             //Report View
             var accountReportView = new AccountReportView(container.Resolve<ISessionFactory>());
@@ -125,6 +130,11 @@ namespace Vaccine.Office.Web
             //Register Event
             commandBus.RegisterHandlerEvent<CustomerCreatedEvent>(customerReportView.Handle);
             commandBus.RegisterHandlerEvent<CustomerAddressAddedEvent>(customerReportView.Handle);
+
+
+            var placeOrderView = new PlaceOrderView(container.Resolve<ISessionFactory>());
+
+            commandBus.RegisterHandlerEvent<OrderPlacedEvent>(placeOrderView.Handle);
 
 
             var productStockReportView = new ProductStockReportView(container.Resolve<ISessionFactory>());

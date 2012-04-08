@@ -99,6 +99,7 @@
     <Compile Include="Controllers\CustomerReportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OnlineBookShopController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Global.asax.cs">
@@ -112,6 +113,7 @@
     <Compile Include="Models\BankAccount\TransferModel.cs" />
     <Compile Include="Models\CustomerReports\DetailModel.cs" />
     <Compile Include="Models\ErrorModel.cs" />
+    <Compile Include="Models\Order\PlaceOrderModel.cs" />
     <Compile Include="Models\QueryExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -272,6 +274,12 @@
   <ItemGroup>
     <Content Include="Views\Product\List.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Order\PlaceOrder.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Order\ViewOrder.cshtml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -289,7 +297,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55004</DevelopmentServerPort>
+          <DevelopmentServerPort>62949</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
