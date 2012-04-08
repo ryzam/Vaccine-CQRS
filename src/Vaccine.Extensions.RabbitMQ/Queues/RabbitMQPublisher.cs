@@ -10,7 +10,7 @@ using Vaccine.Events;
 
 namespace Vaccine.Queue
 {
-    public class RabbitMQPublisher : IQuePublisher
+    public class RabbitMQPublisher : IQueuePublisher
     {
         ConnectionFactory factory;
         IConnection conn;

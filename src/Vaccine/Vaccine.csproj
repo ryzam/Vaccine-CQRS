@@ -59,8 +59,8 @@
     <Compile Include="Infrastructure\ReflectionHandler.cs" />
     <Compile Include="Infrastructure\StreamExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queue\IQuePublisher.cs" />
-    <Compile Include="Queue\IQueSubscriber.cs" />
+    <Compile Include="Queue\IQueuePublisher.cs" />
+    <Compile Include="Queue\IQueueSubscriber.cs" />
     <Compile Include="UnitOfWork\IUnitOfWorkEs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

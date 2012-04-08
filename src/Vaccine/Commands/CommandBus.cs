@@ -15,14 +15,14 @@ namespace Vaccine.Commands
 
         private int sendTry = 0;
 
-        private IQuePublisher pub;
+        private IQueuePublisher pub;
 
         public CommandBus()
         {
 
         }
 
-        public CommandBus(IQuePublisher pub)
+        public CommandBus(IQueuePublisher pub)
         {
             this.pub = pub;
         }
