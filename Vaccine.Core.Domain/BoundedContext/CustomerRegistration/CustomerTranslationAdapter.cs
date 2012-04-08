@@ -12,6 +12,9 @@ namespace Vaccine.Core.Domain.BoundedContext.CustomerRegistration
         {
             var address = self._addresses.Where(c=>c._addressType == Address.AddressType.Billing).FirstOrDefault();
 
+            if (address == null)
+                throw new Exception("Please enter customer address information");
+
             return new CustomerOrder
             {
                 _customerId = self.AggregateRootId,

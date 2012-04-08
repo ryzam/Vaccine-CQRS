@@ -10,6 +10,7 @@ using Vaccine.Core.Cqrs.Commands;
 using Vaccine.Office.Web.Models.Order;
 using Vaccine.Core.Domain.Reporting;
 using Vaccine.Core.Domain.BoundedContext.Order;
+using Vaccine.Office.Web.Models;
 
 namespace Vaccine.Office.Web.Controllers
 {
@@ -78,13 +79,26 @@ namespace Vaccine.Office.Web.Controllers
                     }
 
                     var placeOrderCommand = new PlaceOrderCommand { CustomerId = customer, ProductId = product, ProductOrders = productOrders };
+                    try
+                    {
+                        _cmdBus.Send(placeOrderCommand);
 
-                    _cmdBus.Send(placeOrderCommand);
-
-                    return View("Success");
+                        return View("Success");
+                    }
+                    catch(Exception err)
+                    {
+                        return RedirectToAction("Error", new { err = err.Message });
+                    }
                 }
                 
             }
+        }
+
+        public ActionResult Error(string err)
+        {
+            var error = new ErrorModel { ErrorMessage = err };
+
+            return View(error);
         }
 
         public ActionResult Success()
