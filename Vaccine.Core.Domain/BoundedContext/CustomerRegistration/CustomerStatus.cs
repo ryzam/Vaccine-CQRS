@@ -7,6 +7,6 @@ namespace Vaccine.Core.Domain.BoundedContext.CustomerRegistration
 {
     public enum CustomerStatus
     {
-        Gold,Silver,Brown
+        Gold,Silver,Bronze
     }
 }

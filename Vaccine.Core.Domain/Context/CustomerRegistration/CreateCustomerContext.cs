@@ -33,7 +33,7 @@ namespace Vaccine.Core.Domain.Context.CustomerRegistration
 
                 if (customers.Count() == 0)
                 {
-                    customer = new Customer(command.name, command.email,CustomerStatus.Brown);
+                    customer = new Customer(command.name, command.email,CustomerStatus.Bronze);
 
                     _eventStore.Save<Customer>(customer);
 

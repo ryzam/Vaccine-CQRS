@@ -45,7 +45,7 @@ namespace Vaccine.Core.Domain.BoundedContext.Order
                 _customerDiscount = new CustomerDiscount(new CustomerSilverDiscount());
                 return _customerDiscount.GetDiscount(_productOrder._quantity);
             }
-            else if (_customerOrder._customerStatus == CustomerStatus.Brown)
+            else if (_customerOrder._customerStatus == CustomerStatus.Bronze)
             {
                 _customerDiscount = new CustomerDiscount(new CustomerBrownDiscount());
                 return _customerDiscount.GetDiscount(_productOrder._quantity);
