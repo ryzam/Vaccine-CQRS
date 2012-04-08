@@ -1,0 +1,52 @@
+﻿@{
+    if (Request.Headers["X-PJAX"] != null) 
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Auth/_Layout.cshtml";
+    }
+}
+
+@model Vaccine.Office.Web.Models.BankAccount.TransferModel
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#BusinessSignUpForm').submit(function () {
+
+            var form = $(this);
+            $.ajax({
+                url: form.attr('action'),
+                type: "POST",
+                data: form.serialize(),
+                success: function (data) {
+                    $('#formworkspace').html(data);
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                },
+                complete: function () {
+
+                }
+
+            });
+            return false;
+        });
+
+    });
+</script>
+       
+@{ Html.RenderPartial("TopNavigationMenu"); }
+
+<h3>Transfer Money</h3>
+
+<div id="formworkspace">
+    <form id="BusinessSignUpForm" class="well form-inline" method="post" action="/BankAccount/Transfer">
+        @Html.DropDownList("SourceAccount",Model.SourceAccounts,"-- Select Source Account --")
+        @Html.DropDownList("SinkAccount",Model.SinkAccounts,"-- Select Destination Account --")
+        <input type="text" name="amount" class="input-big" placeholder="Amount">
+        <button type="submit" id="accountBtn" class="btn">Create</button>
+    </form>
+</div>
