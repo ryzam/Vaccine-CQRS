@@ -9,9 +9,9 @@ namespace Vaccine.Core.Cqrs.Events
     [Serializable]
     public class DomainEvent : IDomainEvent
     {
-        public DomainEvent(Guid aggregateRootId)
+        public DomainEvent()
         {
-            AggregateRootId = aggregateRootId;
+            //AggregateRootId = aggregateRootId;
             //EventVersion = version;
             EventState = EventState.Sequence;
             Key = new Key { KeyName = this.GetType().Name };
@@ -29,7 +29,7 @@ namespace Vaccine.Core.Cqrs.Events
     [Serializable]
     public class AggregateCreatedEvent : DomainEvent
     {
-        public AggregateCreatedEvent(Guid aggregateRootId):base(aggregateRootId)
+        public AggregateCreatedEvent()//:base(aggregateRootId)
         {
             this.IsActive = true;
             EventState = EventState.New;

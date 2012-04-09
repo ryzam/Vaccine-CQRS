@@ -9,10 +9,4 @@
     }
 }
 
-@model Vaccine.Office.Web.Models.ErrorModel
-           
-<h2>
-Sorry, an error occurred while processing your request.</h2>
-<br />
-
-<h3>@Model.ErrorMessage</h3>
+@{ Html.RenderPartial("TopNavigationMenu"); }

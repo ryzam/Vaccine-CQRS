@@ -43,6 +43,7 @@ namespace Vaccine.Core.Cqrs.Aggregate
             IsSnapshot = false;
             IsActive = true;
             Version = 1; // Always new created object start with 1
+            //AggregateRootId = Guid.NewGuid();
             RegisterHandler();
         }
 
@@ -103,7 +104,7 @@ namespace Vaccine.Core.Cqrs.Aggregate
 
         private void StartSnapshot(IEnumerable<IDomainEvent> events)
         {
-            if (events.Count() > 3)
+            if (events.Count() > 1000)
             {
                 IsSnapshot = true;
                 CreateSnapshot();
