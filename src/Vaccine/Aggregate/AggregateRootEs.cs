@@ -102,7 +102,7 @@ namespace Vaccine.Aggregate
 
         private void StartSnapshot(IEnumerable<IDomainEvent> events)
         {
-            if (events.Count() > 3)
+            if (events.Count() > 1000)
             {
                 IsSnapshot = true;
                 CreateSnapshot();

@@ -1,0 +1,12 @@
+﻿@{
+    if (Request.Headers["X-PJAX"] != null) 
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Auth/_Layout.cshtml";
+    }
+}
+
+@{ Html.RenderPartial("TopNavigationMenu"); }

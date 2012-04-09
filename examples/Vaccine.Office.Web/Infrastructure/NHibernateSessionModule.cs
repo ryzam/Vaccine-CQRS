@@ -10,7 +10,6 @@ using NHibernate.Cfg.MappingSchema;
 using NHibernate.Mapping.ByCode;
 using System.Reflection;
 using Vaccine.Core.Domain;
-//using MediuCms.Core.Domain.Model.Admission;
 using NHibernate.Mapping.ByCode.Conformist;
 using Vaccine.Events;
 using Vaccine.Aggregate;

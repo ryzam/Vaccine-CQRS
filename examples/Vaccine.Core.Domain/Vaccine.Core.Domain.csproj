@@ -61,19 +61,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoundedContext\CustomerRegistration\AddCustomerAddressCommand.cs" />
     <Compile Include="BoundedContext\CustomerRegistration\Address.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CreateCustomerCommand.cs" />
     <Compile Include="BoundedContext\CustomerRegistration\Customer.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CustomerAddressAdded.cs" />
     <Compile Include="BoundedContext\CustomerRegistration\CustomerCreatedEvent.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CustomerStatus.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CustomerTranslationAdapter.cs" />
+    <Compile Include="BoundedContext\Order\CustomerBrownDiscount.cs" />
+    <Compile Include="BoundedContext\Order\CustomerDiscount.cs" />
+    <Compile Include="BoundedContext\Order\CustomerGoldDiscount.cs" />
+    <Compile Include="BoundedContext\Order\CustomerOrder.cs" />
+    <Compile Include="BoundedContext\Order\CustomerSilverDiscount.cs" />
+    <Compile Include="BoundedContext\Order\Order.cs" />
+    <Compile Include="BoundedContext\Order\OrderItem.cs" />
+    <Compile Include="BoundedContext\Order\OrderPlacedEvent.cs" />
+    <Compile Include="BoundedContext\Order\PlaceOrderCommand.cs" />
+    <Compile Include="BoundedContext\Order\ProductOrder.cs" />
+    <Compile Include="BoundedContext\ProductInventory\CreateProductCommand.cs" />
+    <Compile Include="BoundedContext\ProductInventory\Product.cs" />
+    <Compile Include="BoundedContext\ProductInventory\ProductCreatedEvent.cs" />
+    <Compile Include="BoundedContext\ProductInventory\ProductTranslationAdapter.cs" />
+    <Compile Include="Context\CustomerRegistration\AddCustomerAddressContext.cs" />
+    <Compile Include="Context\CustomerRegistration\CreateCustomerContext.cs" />
+    <Compile Include="Context\PlaceOrder\PlaceOrderContext.cs" />
+    <Compile Include="Context\ProductInventory\StockNewProductContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Context\ChangeAccountNameAndBalanceContext.cs" />
-    <Compile Include="Context\CreateBankAccountContext.cs" />
-    <Compile Include="Context\TransferMoneyContext.cs" />
-    <Compile Include="BoundedContext\Account.cs" />
+    <Compile Include="Context\AccountTransaction\ChangeAccountNameAndBalanceContext.cs" />
+    <Compile Include="Context\AccountTransaction\CreateBankAccountContext.cs" />
+    <Compile Include="Context\AccountTransaction\TransferMoneyContext.cs" />
+    <Compile Include="BoundedContext\AccountTransaction\Account.cs" />
     <Compile Include="Infrastructure\IReportingSessionFactory.cs" />
     <Compile Include="Infrastructure\QueryModule.cs" />
     <Compile Include="Queries\IQuery.cs" />
     <Compile Include="Reporting\AccountTransactionReport.cs" />
     <Compile Include="Reporting\BankAccountReport.cs" />
+    <Compile Include="Reporting\CustomerReport.cs" />
+    <Compile Include="Reporting\PlaceOrderReport.cs" />
+    <Compile Include="Reporting\ProductStockReport.cs" />
     <Compile Include="ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -29,7 +29,9 @@ namespace Vaccine.Events
 
         public IEventStoreTransaction Start()
         {
-            return new NHibernateEventStoreTransaction(_sf);
+            var t = new NHibernateEventStoreTransaction(_sf);
+            this._s = t.Session;
+            return t;
         }
 
         public void Save<T>(AggregateRootEs<T> root, Guid commandId)
@@ -72,25 +74,39 @@ namespace Vaccine.Events
 
                 _s.Flush();
 
-                //aggregateVersion.Version++;
+                
+            }
+
+            if (root.AggregateRootId == Guid.Empty)
+            {
+                root.Version = 1;
+
+                root.AggregateRootId = Guid.NewGuid();
+
+                var _aggregateVersion = new AggregateVersion { Id = root.AggregateRootId, Version = root.Version, TypeName = root.GetTypeName(), LastestEventVersion = latestEventVersion };
+
+                _s.Save(_aggregateVersion);
             }
             
             foreach (var e in events)
             {
                 eventVersion++;
 
+                e.AggregateRootId = root.AggregateRootId;
+
                 //e.EventVersion = eventVersion;
 
-                if (e.EventState == EventState.New)
-                {
-                    root.Version = 1;
+                //if (e.EventState == EventState.New)
+                //{
+                //    root.Version = 1;
 
-                    var _aggregateVersion = new AggregateVersion { Id = root.AggregateRootId, Version = root.Version, TypeName = root.GetTypeName(), LastestEventVersion = latestEventVersion };
+                //    var _aggregateVersion = new AggregateVersion { Id = root.AggregateRootId, Version = root.Version, TypeName = root.GetTypeName(), LastestEventVersion = latestEventVersion };
 
-                    _s.Save(_aggregateVersion);
+                //    _s.Save(_aggregateVersion);
 
-                }
-                else if (e.EventState == EventState.Snapshot)
+                //}
+               
+                if (e.EventState == EventState.Snapshot)
                 {
                     aggregateVersion.Version++;
                     root.Version = aggregateVersion.Version;

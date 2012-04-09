@@ -47,7 +47,7 @@
       <HintPath>..\Vaccine.Office.Web\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="RabbitMQ.Client">
-      <HintPath>..\..\CMS2\MediuCms.Office.Web\packages\RabbitMQ.Client.2.7.1\lib\net30\RabbitMQ.Client.dll</HintPath>
+      <HintPath>..\Vaccine.Office.Web\packages\RabbitMQ.Client.2.8.1\lib\net30\RabbitMQ.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,6 +74,9 @@
       <Project>{1A4DE752-49F6-4C1D-8322-CCBBEBABAD10}</Project>
       <Name>Vaccine.Office.Reporting</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
