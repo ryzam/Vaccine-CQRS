@@ -10,7 +10,6 @@ using NHibernate.Cfg.MappingSchema;
 using NHibernate.Mapping.ByCode;
 using System.Reflection;
 using Vaccine.Core.Domain;
-//using MediuCms.Core.Domain.Model.Admission;
 using NHibernate.Mapping.ByCode.Conformist;
 using Vaccine.Core.Cqrs.Events;
 using Vaccine.Core.Cqrs.Aggregate;
@@ -99,7 +98,7 @@ namespace Vaccine.Office.Web.Infrastructure
             //);
 
 
-            var entities = new List<Type> { typeof(AggregateVersion), typeof(StoredEvent) };// Assembly.Load("MediuCms.Core.Cqrs").GetTypes();
+            var entities = new List<Type> { typeof(AggregateVersion), typeof(StoredEvent) };
 
             var reportingEntities = Assembly.Load("Vaccine.Core.Domain").GetTypes();
 

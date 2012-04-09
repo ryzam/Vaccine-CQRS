@@ -99,7 +99,7 @@ namespace Vaccine.Office.Web.Infrastructure
             //);
 
 
-            var entities = new List<Type> { typeof(AggregateVersion), typeof(StoredEvent) };// Assembly.Load("MediuCms.Core.Cqrs").GetTypes();
+            var entities = new List<Type> { typeof(AggregateVersion), typeof(StoredEvent) };
 
             var reportingEntities = Assembly.Load("Vaccine.Core.Domain").GetTypes();
 

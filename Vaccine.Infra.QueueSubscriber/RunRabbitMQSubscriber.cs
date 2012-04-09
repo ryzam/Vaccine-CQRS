@@ -53,7 +53,7 @@ namespace Vaccine.Infra.QueueSubsriber
             configuration.DataBaseIntegration(c =>
             {
                 c.Dialect<MsSql2008Dialect>();
-                c.ConnectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=MediuCms;Integrated Security=True;Pooling=False";
+                c.ConnectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=VaccineExample;Integrated Security=True;Pooling=False";
                 c.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
                 c.SchemaAction = SchemaAutoAction.Update;
 
