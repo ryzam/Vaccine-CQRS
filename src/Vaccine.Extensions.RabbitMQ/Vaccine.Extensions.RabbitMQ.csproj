@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:src/Vaccine.Extensions.RabbitMQ/Vaccine.Extensions.RabbitMQ.csproj
+=======
+    <Compile Include="AccountReportView.cs" />
+    <Compile Include="CustomerReportView.cs" />
+    <Compile Include="PlaceOrderView.cs" />
+    <Compile Include="ProductStockReportView.cs" />
+>>>>>>> master:Vaccine.Office.Reporting/Vaccine.Office.Reporting.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queues\RabbitMQPublisher.cs" />
     <Compile Include="Queues\RabbitMQSubscriber.cs" />
