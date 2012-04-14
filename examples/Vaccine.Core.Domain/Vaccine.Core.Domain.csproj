@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F20DD284-C763-498B-B3E9-65E94F63CB38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vaccine.Core.Domain</RootNamespace>
+    <AssemblyName>Vaccine.Core.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamic.Role">
+      <HintPath>..\packages\DynamicRole\Dynamic.Role.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.Common">
+      <HintPath>..\packages\DynamicRole\LinFu.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.Delegates">
+      <HintPath>..\packages\DynamicRole\LinFu.Delegates.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\packages\DynamicRole\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.Reflection">
+      <HintPath>..\packages\DynamicRole\LinFu.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoundedContext\CustomerRegistration\AddCustomerAddressCommand.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\Address.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CreateCustomerCommand.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\Customer.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CustomerAddressAdded.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CustomerCreatedEvent.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CustomerStatus.cs" />
+    <Compile Include="BoundedContext\CustomerRegistration\CustomerTranslationAdapter.cs" />
+    <Compile Include="BoundedContext\Order\CustomerBrownDiscount.cs" />
+    <Compile Include="BoundedContext\Order\CustomerDiscount.cs" />
+    <Compile Include="BoundedContext\Order\CustomerGoldDiscount.cs" />
+    <Compile Include="BoundedContext\Order\CustomerOrder.cs" />
+    <Compile Include="BoundedContext\Order\CustomerSilverDiscount.cs" />
+    <Compile Include="BoundedContext\Order\Order.cs" />
+    <Compile Include="BoundedContext\Order\OrderItem.cs" />
+    <Compile Include="BoundedContext\Order\OrderPlacedEvent.cs" />
+    <Compile Include="BoundedContext\Order\PlaceOrderCommand.cs" />
+    <Compile Include="BoundedContext\Order\ProductOrder.cs" />
+    <Compile Include="BoundedContext\ProductInventory\CreateProductCommand.cs" />
+    <Compile Include="BoundedContext\ProductInventory\Product.cs" />
+    <Compile Include="BoundedContext\ProductInventory\ProductCreatedEvent.cs" />
+    <Compile Include="BoundedContext\ProductInventory\ProductTranslationAdapter.cs" />
+    <Compile Include="Context\CustomerRegistration\AddCustomerAddressContext.cs" />
+    <Compile Include="Context\CustomerRegistration\CreateCustomerContext.cs" />
+    <Compile Include="Context\PlaceOrder\PlaceOrderContext.cs" />
+    <Compile Include="Context\ProductInventory\StockNewProductContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Context\AccountTransaction\ChangeAccountNameAndBalanceContext.cs" />
+    <Compile Include="Context\AccountTransaction\CreateBankAccountContext.cs" />
+    <Compile Include="Context\AccountTransaction\TransferMoneyContext.cs" />
+    <Compile Include="BoundedContext\AccountTransaction\Account.cs" />
+    <Compile Include="Infrastructure\IReportingSessionFactory.cs" />
+    <Compile Include="Infrastructure\QueryModule.cs" />
+    <Compile Include="Queries\IQuery.cs" />
+    <Compile Include="Reporting\AccountTransactionReport.cs" />
+    <Compile Include="Reporting\BankAccountReport.cs" />
+    <Compile Include="Reporting\CustomerReport.cs" />
+    <Compile Include="Reporting\PlaceOrderReport.cs" />
+    <Compile Include="Reporting\ProductStockReport.cs" />
+    <Compile Include="ValueObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Vaccine.Extensions.NHibernate\Vaccine.Extensions.NHibernate.csproj">
+      <Project>{28632C85-3EC5-4798-8702-C895EE3C94CE}</Project>
+      <Name>Vaccine.Extensions.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Vaccine\Vaccine.csproj">
+      <Project>{D1481EC5-4FF7-4666-90D5-41884120C488}</Project>
+      <Name>Vaccine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

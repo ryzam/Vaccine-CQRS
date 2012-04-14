@@ -1,0 +1,61 @@
+﻿@{
+    if (Request.Headers["X-PJAX"] != null) 
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Auth/_Layout.cshtml";
+    }
+}
+
+@model Vaccine.Office.Web.Models.AcademicApplication
+           
+<script type="text/javascript">
+    function LoadDetail(url) {
+        $('#tableworkspace').load(url);
+    }
+</script>
+
+<div id="tableworkspace">
+    <div id="tablesearch">
+
+    </div>
+
+    <div id="tabledata">
+        <table id="tableapp" class="table table-striped">
+            <thead><tr><th>ReferenceNumber</th><th>Name</th><th>Status</th><th>SessionCode</th></tr></thead>
+            <tbody>
+                @foreach (var item in Model.Records)
+                {
+                    <tr onclick="LoadDetail('Detail/@item.ReferenceNumber')"><td>@item.ReferenceNumber</td><td>@item.FirstName</td><td>@item.LatestStatus</td><td>@item.SessionCode</td></tr>
+                }
+            </tbody>
+        </table>
+
+        Page @Model.Page from @Model.Total
+
+        <div id="pagination" class="pagination">
+            <ul>
+   
+            @for (int i = Model.StartPgNum; i <= Model.EndPgNum; i++)
+            {
+                if (i == Model.Page)
+                {
+                    <li class="active disable">
+                        <a href="#">@i.ToString()</a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a href="/AcademicApplication/Index?Page=@i.ToString()">@i.ToString()</a>
+                    </li>
+                }
+            }
+    
+  
+            </ul>
+        </div>
+    </div>
+</div>
