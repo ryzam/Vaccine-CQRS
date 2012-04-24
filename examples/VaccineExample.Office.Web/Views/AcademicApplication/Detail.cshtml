@@ -1,0 +1,35 @@
+﻿@{
+
+        Layout = null;
+    
+}
+
+@model MediuCms.Office.Web.Models.AcademicApplication.DetailModel
+
+<div>
+    <div class="header">
+        <h3>@Model.Name</h3>
+    </div>
+    <form class="form-vertical">
+    <div class="row" style="margin-top:10px">
+        <div class="span4">
+            <div class="control-group">
+                <label class="control-label">Other Name</label>
+                <div class="controls">
+                    <span class="input-xlarge uneditable-input">@Model.OtherName</span>
+                </div>
+            </div>
+        </div>
+        <div class="span4" style="margin-left:0px;">
+            <div class="control-group">
+                <label class="control-label">Reference Number</label>
+                <div class="controls">
+                    <span class="input-xlarge uneditable-input">@Model.RefNumber</span>
+                </div>
+            </div>
+        </div>
+        <div class="span2" style="margin-left:0px; float:right">
+            <img src="/Content/images/avatar.png" style="width:100px; height:100px; vertical-align:bottom; float:right" /></div>
+        </div>
+    </form>
+</div>
