@@ -5,12 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using NHibernate;
 using Vaccine.Commands;
-using Vaccine.Office.Web.Infrastructure;
+using VaccineExample.Office.Web.Infrastructure;
 using NHibernate.Linq;
-using Vaccine.Core.Domain.Reporting;
-using Vaccine.Office.Web.Models.CustomerReports;
+using VaccineExample.Core.Domain.Reporting;
+using VaccineExample.Office.Web.Models.CustomerReports;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class CustomerReportController : Controller
     {

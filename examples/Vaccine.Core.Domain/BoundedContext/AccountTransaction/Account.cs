@@ -5,7 +5,7 @@ using System.Text;
 using Vaccine.Events;
 using Vaccine.Aggregate;
 
-namespace Vaccine.Core.Domain.BoundedContext
+namespace VaccineExample.Core.Domain.BoundedContext
 {
     [Serializable]
     public class BalanceDecreasedEvent : DomainEvent

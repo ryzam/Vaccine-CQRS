@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.Order;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.Order;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
 
-namespace Vaccine.Core.Domain.Reporting
+namespace VaccineExample.Core.Domain.Reporting
 {
     public class PlaceOrderReport
     {

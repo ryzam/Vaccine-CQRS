@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
 using Vaccine.Commands;
 using NHibernate;
 using NHibernate.Linq;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.Reporting;
 
-namespace Vaccine.Office.Reporting
+namespace VaccineExample.Office.Reporting
 {
     public class CustomerReportView : IReportViewHandler<CustomerCreatedEvent>, IReportViewHandler<CustomerAddressAddedEvent>
     {

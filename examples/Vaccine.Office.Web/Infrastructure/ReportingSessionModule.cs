@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using Autofac;
 using Vaccine.Queue;
-using Vaccine.Infra.QueueSubsriber;
+using VaccineExample.Infra.QueueSubsriber;
 using NHibernate;
-using Vaccine.Office.Reporting;
+using VaccineExample.Office.Reporting;
 using NHibernate.Cfg;
-using Vaccine.Core.Domain;
+using VaccineExample.Core.Domain;
 using NHibernate.Dialect;
 using NHibernate.Cfg.MappingSchema;
 using NHibernate.Mapping.ByCode;
 using System.Reflection;
-using Vaccine.Core.Domain.Infrastructure;
+using VaccineExample.Core.Domain.Infrastructure;
 
-namespace Vaccine.Office.Web.Infrastructure
+namespace VaccineExample.Office.Web.Infrastructure
 {
     public class ReportingSessionModule : Autofac.Module
     {

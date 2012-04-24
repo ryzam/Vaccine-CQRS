@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Vaccine.Commands;
-using Address = Vaccine.Core.Domain.BoundedContext.CustomerRegistration.Address;
+using Address = VaccineExample.Core.Domain.BoundedContext.CustomerRegistration.Address;
 
-namespace Vaccine.Core.Domain.BoundedContext.CustomerRegistration
+namespace VaccineExample.Core.Domain.BoundedContext.CustomerRegistration
 {
     public class AddCustomerAddressCommand : DomainCommand
     {

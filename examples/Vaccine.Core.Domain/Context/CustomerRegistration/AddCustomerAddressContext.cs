@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using Vaccine.Commands;
 using Vaccine.Events;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
 using NHibernate.Context;
 
-namespace Vaccine.Core.Domain.Context.CustomerRegistration
+namespace VaccineExample.Core.Domain.Context.CustomerRegistration
 {
     public class AddCustomerAddressContext : ICommandHandler<AddCustomerAddressCommand>
     {

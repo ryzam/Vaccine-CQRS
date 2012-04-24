@@ -8,7 +8,7 @@
     <ProjectGuid>{D1481EC5-4FF7-4666-90D5-41884120C488}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Vaccine</RootNamespace>
+    <RootNamespace>VaccineExample</RootNamespace>
     <AssemblyName>Vaccine</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

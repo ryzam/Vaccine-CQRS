@@ -8,7 +8,7 @@
     <ProjectGuid>{8C4655B9-B6AF-4F54-B92E-A9CF96832094}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Vaccine</RootNamespace>
+    <RootNamespace>VaccineExample</RootNamespace>
     <AssemblyName>Vaccine.Extensions.RabbitMQ</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

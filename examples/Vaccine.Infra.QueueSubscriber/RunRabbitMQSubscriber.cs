@@ -13,15 +13,15 @@ using NHibernate.Mapping.ByCode;
 using NHibernate.Cfg;
 using NHibernate;
 using NHibernate.Dialect;
-using Vaccine.Core.Domain.Context;
+using VaccineExample.Core.Domain.Context;
 using NHibernate.Type;
 using Vaccine.Aggregate;
 using System.Threading;
 using System.Reflection;
-using Vaccine.Office.Reporting;
-using Vaccine.Core.Domain.BoundedContext;
+using VaccineExample.Office.Reporting;
+using VaccineExample.Core.Domain.BoundedContext;
 
-namespace Vaccine.Infra.QueueSubsriber
+namespace VaccineExample.Infra.QueueSubsriber
 {
     public class RabbitMQSubscriber
     {
@@ -53,7 +53,7 @@ namespace Vaccine.Infra.QueueSubsriber
             configuration.DataBaseIntegration(c =>
             {
                 c.Dialect<MsSql2008Dialect>();
-                c.ConnectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=VaccineExample;Integrated Security=True;Pooling=False";
+                c.ConnectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Vaccine;Integrated Security=True;Pooling=False";
                 c.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
                 c.SchemaAction = SchemaAutoAction.Update;
 

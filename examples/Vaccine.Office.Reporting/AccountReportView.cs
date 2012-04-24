@@ -5,10 +5,10 @@ using System.Web;
 using NHibernate.Linq;
 using NHibernate;
 using Vaccine.Commands;
-using Vaccine.Core.Domain.Reporting;
-using Vaccine.Core.Domain.BoundedContext;
+using VaccineExample.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.BoundedContext;
 
-namespace Vaccine.Office.Reporting
+namespace VaccineExample.Office.Reporting
 {
     
   

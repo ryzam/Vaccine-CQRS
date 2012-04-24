@@ -5,14 +5,14 @@ using System.Web;
 using System.Web.Mvc;
 using NHibernate;
 using NHibernate.Linq;
-using Vaccine.Office.Web.Infrastructure;
+using VaccineExample.Office.Web.Infrastructure;
 using Vaccine.Commands;
-using Vaccine.Office.Web.Models.Order;
-using Vaccine.Core.Domain.Reporting;
-using Vaccine.Core.Domain.BoundedContext.Order;
-using Vaccine.Office.Web.Models;
+using VaccineExample.Office.Web.Models.Order;
+using VaccineExample.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.BoundedContext.Order;
+using VaccineExample.Office.Web.Models;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class OrderController : Controller
     {

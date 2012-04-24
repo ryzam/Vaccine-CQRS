@@ -6,9 +6,9 @@ using NHibernate.Context;
 using NHibernate.Linq;
 using Vaccine.Commands;
 using Vaccine.Events;
-using Vaccine.Core.Domain.BoundedContext;
+using VaccineExample.Core.Domain.BoundedContext;
 
-namespace Vaccine.Core.Domain.Context
+namespace VaccineExample.Core.Domain.Context
 {
     [Serializable]
     public class OpenAccountCommand : DomainCommand

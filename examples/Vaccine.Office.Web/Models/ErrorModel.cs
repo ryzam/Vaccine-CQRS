@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Vaccine.Office.Web.Models
+namespace VaccineExample.Office.Web.Models
 {
     public class ErrorModel
     {

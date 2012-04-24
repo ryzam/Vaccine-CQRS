@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vaccine.Core.Domain.Context;
-using Vaccine.Office.Web.Infrastructure;
+using VaccineExample.Core.Domain.Context;
+using VaccineExample.Office.Web.Infrastructure;
 using NHibernate;
 using NHibernate.Linq;
-using Vaccine.Office.Web.Models.BankAccount;
-using Vaccine.Office.Reporting;
+using VaccineExample.Office.Web.Models.BankAccount;
+using VaccineExample.Office.Reporting;
 using Vaccine.Commands;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.Reporting;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class BankAccountController : Controller
     {

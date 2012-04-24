@@ -15,6 +15,10 @@ namespace Vaccine.Aggregate
         public string KeyName { get; set; }
     }
 
+    /// <summary>
+    /// Aggregate Root for CQRS Event Sourcing
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     [Serializable]
     public abstract class AggregateRootEs<T> : ISnapshot
     {

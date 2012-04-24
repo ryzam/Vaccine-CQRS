@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
 
-namespace Vaccine.Core.Domain.BoundedContext.Order
+namespace VaccineExample.Core.Domain.BoundedContext.Order
 {
     public class OrderItem
     {

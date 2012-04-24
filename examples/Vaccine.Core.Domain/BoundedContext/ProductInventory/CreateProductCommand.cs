@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Vaccine.Commands;
 
-namespace Vaccine.Core.Domain.BoundedContext.ProductInventory
+namespace VaccineExample.Core.Domain.BoundedContext.ProductInventory
 {
     public class CreateProductCommand : DomainCommand
     {

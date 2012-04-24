@@ -9,12 +9,12 @@ using NHibernate;
 using NHibernate.Cfg.MappingSchema;
 using NHibernate.Mapping.ByCode;
 using System.Reflection;
-using Vaccine.Core.Domain;
+using VaccineExample.Core.Domain;
 using NHibernate.Mapping.ByCode.Conformist;
 using Vaccine.Events;
 using Vaccine.Aggregate;
 
-namespace Vaccine.Office.Web.Infrastructure
+namespace VaccineExample.Office.Web.Infrastructure
 {
     public class NHibernateSessionModule : Autofac.Module
     {
@@ -102,6 +102,7 @@ namespace Vaccine.Office.Web.Infrastructure
 
             var reportingEntities = Assembly.Load("Vaccine.Core.Domain").GetTypes();
 
+            //We save our report in the same database
             foreach (var e in reportingEntities.Where(c=>c.Name.EndsWith("Report")))
             {
                 entities.Add(e);

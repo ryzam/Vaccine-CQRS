@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.Reporting;
 using NHibernate;
 using NHibernate.Linq;
 
-namespace Vaccine.Office.Web.Models.Order
+namespace VaccineExample.Office.Web.Models.Order
 {
     public class PlaceOrderModel
     {

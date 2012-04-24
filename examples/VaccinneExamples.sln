@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaccine.Core.Domain", "Vaccine.Core.Domain\Vaccine.Core.Domain.csproj", "{F20DD284-C763-498B-B3E9-65E94F63CB38}"
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineExample.Core.Domain", "VaccineExample.Core.Domain\VaccineExample.Core.Domain.csproj", "{F20DD284-C763-498B-B3E9-65E94F63CB38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaccine.Infra.QueueSubscriber", "Vaccine.Infra.QueueSubscriber\Vaccine.Infra.QueueSubscriber.csproj", "{40B90DEB-44CB-430D-9930-B5B149A14F98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineExample.Infra.QueueSubscriber", "VaccineExample.Infra.QueueSubscriber\VaccineExample.Infra.QueueSubscriber.csproj", "{40B90DEB-44CB-430D-9930-B5B149A14F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaccine.Office.Reporting", "Vaccine.Office.Reporting\Vaccine.Office.Reporting.csproj", "{1A4DE752-49F6-4C1D-8322-CCBBEBABAD10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineExample.Office.Reporting", "VaccineExample.Office.Reporting\VaccineExample.Office.Reporting.csproj", "{1A4DE752-49F6-4C1D-8322-CCBBEBABAD10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaccine.Office.Web", "Vaccine.Office.Web\Vaccine.Office.Web.csproj", "{DC6EF846-5F76-4A68-833A-EA0A98A86421}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineExample.Office.Web", "VaccineExample.Office.Web\VaccineExample.Office.Web.csproj", "{DC6EF846-5F76-4A68-833A-EA0A98A86421}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{B783034D-9A8C-47A0-92D3-A85EDA9C3E0E}"
 EndProject

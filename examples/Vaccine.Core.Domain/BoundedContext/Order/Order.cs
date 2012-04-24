@@ -5,7 +5,7 @@ using System.Text;
 using Vaccine.Aggregate;
 using Vaccine.Events;
 
-namespace Vaccine.Core.Domain.BoundedContext.Order
+namespace VaccineExample.Core.Domain.BoundedContext.Order
 {
     public class Order : AggregateRootEs<Order>
     {

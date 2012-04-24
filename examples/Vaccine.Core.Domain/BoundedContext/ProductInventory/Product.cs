@@ -5,7 +5,7 @@ using System.Text;
 using Vaccine.Aggregate;
 using Vaccine.Events;
 
-namespace Vaccine.Core.Domain.BoundedContext.ProductInventory
+namespace VaccineExample.Core.Domain.BoundedContext.ProductInventory
 {
     public class Product : AggregateRootEs<Product>
     {

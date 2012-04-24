@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.Order;
+using VaccineExample.Core.Domain.BoundedContext.Order;
 using Vaccine.Commands;
 using NHibernate;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.Reporting;
 
-namespace Vaccine.Office.Reporting
+namespace VaccineExample.Office.Reporting
 {
     public class PlaceOrderView : IReportViewHandler<OrderPlacedEvent>
     {

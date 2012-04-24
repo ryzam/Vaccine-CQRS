@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace Vaccine.Office.Web.Models
+namespace VaccineExample.Office.Web.Models
 {
 
     public class ChangePasswordModel

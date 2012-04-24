@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NHibernate;
 
-namespace Vaccine.Core.Domain.Infrastructure
+namespace VaccineExample.Core.Domain.Infrastructure
 { 
     public interface IReportingSessionFactory : ISessionFactory
     {

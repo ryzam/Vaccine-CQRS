@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.Order;
+using VaccineExample.Core.Domain.BoundedContext.Order;
 
-namespace Vaccine.Core.Domain.BoundedContext.ProductInventory
+namespace VaccineExample.Core.Domain.BoundedContext.ProductInventory
 {
     public static class ProductTranslationAdapter
     {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using NHibernate;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class AbstractController : Controller
     {

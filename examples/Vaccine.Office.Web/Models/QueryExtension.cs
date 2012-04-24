@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Vaccine.Core.Domain.Queries;
+using VaccineExample.Core.Domain.Queries;
 using System.Web.Mvc;
 using Autofac;
-using Vaccine.Office.Web.Models.AcademicApplication;
+using VaccineExample.Office.Web.Models.AcademicApplication;
 
-namespace Vaccine.Office.Web
+namespace VaccineExample.Office.Web
 {
     public static class ControllerQueryExtension
     {

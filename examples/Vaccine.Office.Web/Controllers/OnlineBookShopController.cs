@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class OnlineBookShopController : Controller
     {

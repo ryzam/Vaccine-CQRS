@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.Order;
+using VaccineExample.Core.Domain.BoundedContext.Order;
 
-namespace Vaccine.Core.Domain.BoundedContext.CustomerRegistration
+namespace VaccineExample.Core.Domain.BoundedContext.CustomerRegistration
 {
     public static class CustomerTranslationAdapter
     {

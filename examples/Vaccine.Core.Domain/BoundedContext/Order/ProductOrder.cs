@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Vaccine.Core.Domain.BoundedContext.Order
+namespace VaccineExample.Core.Domain.BoundedContext.Order
 {
     [Serializable]
     public class ProductOrder

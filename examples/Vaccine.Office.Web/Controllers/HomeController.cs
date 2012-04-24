@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using NHibernate;
 using NHibernate.Context;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class HomeController : Controller
     {

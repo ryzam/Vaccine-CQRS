@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using Autofac;
 using NHibernate;
-using Vaccine.Core.Domain.Queries;
+using VaccineExample.Core.Domain.Queries;
 using NHibernate.Linq;
  
-namespace Vaccine.Core.Domain.Infrastructure
+namespace VaccineExample.Core.Domain.Infrastructure
 {
     public class QueryModule : Autofac.Module
     {

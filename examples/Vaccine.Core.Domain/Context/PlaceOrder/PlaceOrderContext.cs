@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.Order;
+using VaccineExample.Core.Domain.BoundedContext.Order;
 using Vaccine.Commands;
 using Vaccine.Events;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
-using Vaccine.Core.Domain.BoundedContext.ProductInventory;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.ProductInventory;
 
-namespace Vaccine.Core.Domain.Context.PlaceOrder
+namespace VaccineExample.Core.Domain.Context.PlaceOrder
 {
     public class PlaceOrderContext : ICommandHandler<PlaceOrderCommand>
     {

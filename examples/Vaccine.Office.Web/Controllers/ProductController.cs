@@ -6,11 +6,11 @@ using System.Web.Mvc;
 using NHibernate;
 using NHibernate.Linq;
 using Vaccine.Commands;
-using Vaccine.Office.Web.Infrastructure;
-using Vaccine.Core.Domain.BoundedContext.ProductInventory;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Office.Web.Infrastructure;
+using VaccineExample.Core.Domain.BoundedContext.ProductInventory;
+using VaccineExample.Core.Domain.Reporting;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class ProductController : Controller
     {

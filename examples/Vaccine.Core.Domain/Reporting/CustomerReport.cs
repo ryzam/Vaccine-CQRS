@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Address = Vaccine.Core.Domain.BoundedContext.CustomerRegistration.Address;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
+using Address = VaccineExample.Core.Domain.BoundedContext.CustomerRegistration.Address;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
 
-namespace Vaccine.Core.Domain.Reporting
+namespace VaccineExample.Core.Domain.Reporting
 {
     public class CustomerReport
     {

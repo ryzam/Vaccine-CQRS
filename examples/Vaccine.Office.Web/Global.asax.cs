@@ -6,24 +6,24 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
-using Vaccine.Office.Web.Infrastructure;
+using VaccineExample.Office.Web.Infrastructure;
 using System.Reflection;
-using Vaccine.Core.Domain.Infrastructure;
+using VaccineExample.Core.Domain.Infrastructure;
 using Vaccine.Commands;
 using Vaccine.Events;
-using Vaccine.Core.Domain.Context;
+using VaccineExample.Core.Domain.Context;
 using NHibernate;
 using Vaccine.Queue;
-using Vaccine.Office.Reporting;
-using Vaccine.Core.Domain.BoundedContext;
-using Vaccine.Core.Domain.Context.CustomerRegistration;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
-using Vaccine.Core.Domain.BoundedContext.ProductInventory;
-using Vaccine.Core.Domain.Context.ProductInventory;
-using Vaccine.Core.Domain.Context.PlaceOrder;
-using Vaccine.Core.Domain.BoundedContext.Order;
+using VaccineExample.Office.Reporting;
+using VaccineExample.Core.Domain.BoundedContext;
+using VaccineExample.Core.Domain.Context.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.ProductInventory;
+using VaccineExample.Core.Domain.Context.ProductInventory;
+using VaccineExample.Core.Domain.Context.PlaceOrder;
+using VaccineExample.Core.Domain.BoundedContext.Order;
 
-namespace Vaccine.Office.Web
+namespace VaccineExample.Office.Web
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
@@ -118,30 +118,29 @@ namespace Vaccine.Office.Web
 
             //Report View
             var accountReportView = new AccountReportView(sessionFactory);
-
             //Register Event
             commandBus.RegisterHandlerEvent<AccountCreatedEvent>(accountReportView.Handle);
             commandBus.RegisterHandlerEvent<AccountNameAndBalanceChangedEvent>(accountReportView.Handle);
             commandBus.RegisterHandlerEvent<BalanceDecreasedEvent>(accountReportView.Handle);
             commandBus.RegisterHandlerEvent<BalanceIncreasedEvent>(accountReportView.Handle);
+            //---------------------------------------------------------------------------------------------
 
             //Report View
             var customerReportView = new CustomerReportView(container.Resolve<ISessionFactory>());
-
             //Register Event
             commandBus.RegisterHandlerEvent<CustomerCreatedEvent>(customerReportView.Handle);
             commandBus.RegisterHandlerEvent<CustomerAddressAddedEvent>(customerReportView.Handle);
+            //---------------------------------------------------------------------------------------------
 
-
+            //Report View
             var placeOrderView = new PlaceOrderView(container.Resolve<ISessionFactory>());
-
             commandBus.RegisterHandlerEvent<OrderPlacedEvent>(placeOrderView.Handle);
+            //---------------------------------------------------------------------------------------------
 
-
+            //Report View
             var productStockReportView = new ProductStockReportView(container.Resolve<ISessionFactory>());
-
             commandBus.RegisterHandlerEvent<ProductCreatedEvent>(productStockReportView.Handle);
-
+            //---------------------------------------------------------------------------------------------
 
             //ServiceLocator.Pub = rabbitMQPublisher;
             ServiceLocator.Bus = commandBus;

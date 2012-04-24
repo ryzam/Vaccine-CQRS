@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NHibernate;
-using Vaccine.Core.Domain.BoundedContext.ProductInventory;
+using VaccineExample.Core.Domain.BoundedContext.ProductInventory;
 using Vaccine.Commands;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.Reporting;
 
-namespace Vaccine.Office.Reporting
+namespace VaccineExample.Office.Reporting
 {
     public class ProductStockReportView: IReportViewHandler<ProductCreatedEvent>
     {

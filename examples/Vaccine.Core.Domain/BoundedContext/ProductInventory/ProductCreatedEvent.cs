@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Vaccine.Events;
 
-namespace Vaccine.Core.Domain.BoundedContext.ProductInventory
+namespace VaccineExample.Core.Domain.BoundedContext.ProductInventory
 {
     [Serializable]
     public class ProductCreatedEvent : DomainEvent

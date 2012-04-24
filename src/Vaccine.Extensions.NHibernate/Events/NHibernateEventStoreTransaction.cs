@@ -15,6 +15,7 @@ namespace Vaccine.Events
         public NHibernateEventStoreTransaction(ISessionFactory sf)
         {
             this.SessionFactory = sf;
+
             this.Session = sf.OpenSession();
 
             WebSessionContext.Bind(this.Session);;

@@ -5,10 +5,10 @@ using System.Web;
 using NHibernate;
 using NHibernate.Linq;
 using System.Web.Mvc;
-using Vaccine.Office.Reporting;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Office.Reporting;
+using VaccineExample.Core.Domain.Reporting;
 
-namespace Vaccine.Office.Web.Models.BankAccount
+namespace VaccineExample.Office.Web.Models.BankAccount
 {
     public class TransferModel
     {

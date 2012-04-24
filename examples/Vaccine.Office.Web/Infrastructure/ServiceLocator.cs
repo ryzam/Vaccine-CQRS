@@ -5,7 +5,7 @@ using System.Web;
 using Vaccine.Queue;
 using Vaccine.Commands;
 
-namespace Vaccine.Office.Web.Infrastructure
+namespace VaccineExample.Office.Web.Infrastructure
 {
     public class ServiceLocator
     {

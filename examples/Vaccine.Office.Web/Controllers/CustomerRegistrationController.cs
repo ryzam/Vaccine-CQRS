@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
 using NHibernate;
 using Vaccine.Commands;
-using Vaccine.Office.Web.Infrastructure;
-using Address = Vaccine.Core.Domain.BoundedContext.CustomerRegistration.Address;
-using Vaccine.Office.Web.Models;
+using VaccineExample.Office.Web.Infrastructure;
+using Address = VaccineExample.Core.Domain.BoundedContext.CustomerRegistration.Address;
+using VaccineExample.Office.Web.Models;
 
-namespace Vaccine.Office.Web.Controllers
+namespace VaccineExample.Office.Web.Controllers
 {
     public class CustomerRegistrationController : Controller
     {

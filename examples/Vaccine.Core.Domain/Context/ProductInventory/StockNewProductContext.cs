@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Vaccine.Core.Domain.BoundedContext.ProductInventory;
+using VaccineExample.Core.Domain.BoundedContext.ProductInventory;
 using Vaccine.Commands;
 using Vaccine.Events;
 using NHibernate.Context;
 
-namespace Vaccine.Core.Domain.Context.ProductInventory
+namespace VaccineExample.Core.Domain.Context.ProductInventory
 {
     public class StockNewProductContext : ICommandHandler<CreateProductCommand>
     {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.Reporting;
 using System.Web.Mvc;
-using Add = Vaccine.Core.Domain.BoundedContext.CustomerRegistration.Address;
+using Add = VaccineExample.Core.Domain.BoundedContext.CustomerRegistration.Address;
 
-namespace Vaccine.Office.Web.Models.CustomerReports
+namespace VaccineExample.Office.Web.Models.CustomerReports
 {
     public class DetailModel
     {
@@ -45,6 +45,6 @@ namespace Vaccine.Office.Web.Models.CustomerReports
 
         public string PostCode { get; set; }
 
-        public Vaccine.Core.Domain.BoundedContext.CustomerRegistration.Address.AddressType AddressType { get; set; }
+        public VaccineExample.Core.Domain.BoundedContext.CustomerRegistration.Address.AddressType AddressType { get; set; }
     }
 }

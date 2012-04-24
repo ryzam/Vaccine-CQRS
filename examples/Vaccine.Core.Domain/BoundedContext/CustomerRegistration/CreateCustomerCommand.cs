@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Vaccine.Commands;
 
-namespace Vaccine.Core.Domain.BoundedContext.CustomerRegistration
+namespace VaccineExample.Core.Domain.BoundedContext.CustomerRegistration
 {
     public class CreateCustomerCommand : DomainCommand
     {

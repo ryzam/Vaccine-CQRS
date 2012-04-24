@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Vaccine.Commands;
 
-namespace Vaccine.Core.Domain.BoundedContext.Order
+namespace VaccineExample.Core.Domain.BoundedContext.Order
 {
     public class PlaceOrderCommand : DomainCommand
     {

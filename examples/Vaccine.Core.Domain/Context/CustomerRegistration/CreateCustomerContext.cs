@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Vaccine.Commands;
-using Vaccine.Core.Domain.BoundedContext.CustomerRegistration;
+using VaccineExample.Core.Domain.BoundedContext.CustomerRegistration;
 using Vaccine.Events;
 using NHibernate.Context;
-using Vaccine.Core.Domain.Infrastructure;
-using Vaccine.Core.Domain.Reporting;
+using VaccineExample.Core.Domain.Infrastructure;
+using VaccineExample.Core.Domain.Reporting;
 
-namespace Vaccine.Core.Domain.Context.CustomerRegistration
+namespace VaccineExample.Core.Domain.Context.CustomerRegistration
 {
     public class CreateCustomerContext : ICommandHandler<CreateCustomerCommand>
     {
@@ -26,6 +26,7 @@ namespace Vaccine.Core.Domain.Context.CustomerRegistration
             using (var s = _eventStore.Start())
             {
                 Customer customer;
+
 
                 var customers = QueryModule.Query<CustomerReport>().Where(c => c.Email == command.email);
 

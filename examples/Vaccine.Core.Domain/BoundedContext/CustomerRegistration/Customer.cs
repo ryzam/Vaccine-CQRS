@@ -5,7 +5,7 @@ using System.Text;
 using Vaccine.Aggregate;
 using Vaccine.Events;
 
-namespace Vaccine.Core.Domain.BoundedContext.CustomerRegistration
+namespace VaccineExample.Core.Domain.BoundedContext.CustomerRegistration
 {
     public class Customer : AggregateRootEs<Customer>
     {
@@ -42,7 +42,7 @@ namespace Vaccine.Core.Domain.BoundedContext.CustomerRegistration
             _addresses = new List<Address>();
         }
 
-        public void AddCustomerAddress(string address1,string address2,string postCode,Vaccine.Core.Domain.BoundedContext.CustomerRegistration.Address.AddressType addressType)
+        public void AddCustomerAddress(string address1,string address2,string postCode,VaccineExample.Core.Domain.BoundedContext.CustomerRegistration.Address.AddressType addressType)
         {
             var _filterAddress = _addresses.Where(c => c._addressType == addressType);
             if (_filterAddress!=null && _filterAddress.Count() == 1)

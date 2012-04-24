@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NHibernate;
-using Vaccine.Core.Domain.Infrastructure;
+using VaccineExample.Core.Domain.Infrastructure;
  
-namespace Vaccine.Core.Domain.Queries
+namespace VaccineExample.Core.Domain.Queries
 {
     public interface IQueryRepo
     {

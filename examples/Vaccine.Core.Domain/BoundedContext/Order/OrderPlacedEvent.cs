@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Vaccine.Events;
 
-namespace Vaccine.Core.Domain.BoundedContext.Order
+namespace VaccineExample.Core.Domain.BoundedContext.Order
 {
     [Serializable]
     public class OrderPlacedEvent : DomainEvent
